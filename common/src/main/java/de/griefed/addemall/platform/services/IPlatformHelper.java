@@ -1,6 +1,13 @@
 package de.griefed.addemall.platform.services;
 
+import net.minecraft.world.item.CreativeModeTab;
+
 public interface IPlatformHelper {
+
+    /**
+     * @return The Just Enough Crowns Creative Tab.
+     */
+    CreativeModeTab getCreativeTab();
 
     /**
      * Gets the name of the current platform

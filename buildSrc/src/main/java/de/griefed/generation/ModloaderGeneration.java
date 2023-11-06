@@ -46,10 +46,14 @@ public abstract class ModloaderGeneration {
         this.modloader = project.getName();
         this.id = group.substring(group.lastIndexOf(".") + 1);
         this.blocksGroup = new File(groupDirectory, "block");
-        this.modBlocksClass = new File(blocksGroup, "ModBlocks.java");
+        this.modBlocksClass = new File(blocksGroup, "GeneratedModBlocks.java");
         this.itemGroup = new File(groupDirectory, "item");
-        this.modItemsClass = new File(itemGroup, "ModItems.java");
-        this.modloaderClass = new File(groupDirectory, subName + ".java");
+        this.modItemsClass = new File(itemGroup, "GeneratedModItems.java");
+        if (project.getName().equalsIgnoreCase("common")) {
+            this.modloaderClass = new File(groupDirectory,"CommonClass.java");
+        } else {
+            this.modloaderClass = new File(groupDirectory, subName + ".java");
+        }
         this.assetsDirectory = new File(project.getProjectDir(),"src/main/resources/assets/" + id);
         this.translationsFile = new File(assetsDirectory, "lang/en_us.json");
     }
@@ -166,7 +170,7 @@ public abstract class ModloaderGeneration {
         blockTexturesDir.mkdirs();
         String blockstatesTemp = "BLOCKID_block.json";
         String blockModelTemp = "BLOCKID_block.json";
-        String itemBlockModelTemp = "BLOCKID_block.json";
+        String itemBlockModelTemp = "BLOCKID.json";
         String blockTextureTemp = "BLOCKID_block.png";
         File blockstate;
         File blockModel;

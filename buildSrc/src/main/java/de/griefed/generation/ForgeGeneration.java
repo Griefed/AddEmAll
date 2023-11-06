@@ -28,14 +28,14 @@ public class ForgeGeneration extends ModloaderGeneration implements CodeGenerati
 
     @Override
     public void run() throws IOException {
-        createModBlockPackage();
-        createItemPackage();
-        createModBlocksClass();
-        createModItemsClass();
-        createModloaderClass();
-        updateModBlocksClass();
-        updateModItemsClass();
-        updateModloaderMain();
+//        createModBlockPackage();
+//        createItemPackage();
+//        createModBlocksClass();
+//        createModItemsClass();
+//        createModloaderClass();
+//        updateModBlocksClass();
+//        updateModItemsClass();
+//        updateModloaderMain();
     }
 
     @Override
@@ -71,7 +71,7 @@ public class ForgeGeneration extends ModloaderGeneration implements CodeGenerati
             registration = new StringBuilder();
             registration.append("\n\tpublic static final RegistryObject<Block> ").append(block.getId().toUpperCase()).append("_BLOCK = registerBlock(\"").append(block.getId()).append("_block\",\n")
                     .append("\t\t\t() -> new Block(BlockBehaviour.Properties.of(Material.").append(block.getMaterial()).append(")\n")
-                    .append("\t\t\t\t\t.strength(").append(block.getStrength()).append("f).lightLevel(state -> ").append(block.getLightLevel()).append(")").append(".explosionResistance(").append(block.getExplosionResistance()).append("f)\n\t\t\t\t\t");
+                    .append("\t\t\t\t\t.strength(").append(block.getStrengthOne()).append("f).lightLevel(state -> ").append(block.getLightLevel()).append(")").append(".explosionResistance(").append(block.getExplosionResistance()).append("f)\n\t\t\t\t\t");
             if (block.isRequiresCorrectTool()) {
                 registration.append(".requiresCorrectToolForDrops()");
             }

@@ -1,8 +1,9 @@
 package de.griefed.addemall;
 
 import com.mojang.logging.LogUtils;
-import de.griefed.addemall.block.ModBlocks;
-import de.griefed.addemall.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +20,13 @@ public class AddEmAllForge {
     public static final String MOD_ID = "addemall";
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    public static final CreativeModeTab TAB_ADDEMALL = new CreativeModeTab(Constants.MOD_ID + ".tab") {
+      @Override
+      public ItemStack makeIcon() {
+          return new ItemStack(Items.DIAMOND);
+      }
+    };
+
     // Very Important Comment
     public AddEmAllForge() {
         // Use Forge to bootstrap the Common mod.
@@ -27,11 +35,6 @@ public class AddEmAllForge {
         CommonClass.init();
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
-		ModItems.register(modEventBus);
-		ModBlocks.register(modEventBus);
-		/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
 
         modEventBus.addListener(this::commonSetup);
 

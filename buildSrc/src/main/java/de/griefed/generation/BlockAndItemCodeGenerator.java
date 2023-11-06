@@ -32,13 +32,13 @@ public class BlockAndItemCodeGenerator implements Plugin<Project> {
             String modName = gradleProperties.getProperty("mod_name");
             BlockDefinitionParser parser = new BlockDefinitionParser(project, objectMapper);
 
-            CommonGeneration common = new CommonGeneration(project.findProject("common"), modName, parser, objectMapper);
-            FabricGeneration fabric = new FabricGeneration(project.findProject("fabric"), modName, parser, objectMapper);
-            ForgeGeneration forge = new ForgeGeneration(project.findProject("forge"), modName, parser, objectMapper);
+            CommonGeneration common = new CommonGeneration(project.findProject("Common"), modName, parser, objectMapper);
+            //FabricGeneration fabric = new FabricGeneration(project.findProject("fabric"), modName, parser, objectMapper);
+            //ForgeGeneration forge = new ForgeGeneration(project.findProject("forge"), modName, parser, objectMapper);
 
             common.run();
-            fabric.run();
-            forge.run();
+            //fabric.run();
+            //forge.run();
         } catch (IOException e) {
             throw new RuntimeException("Error generating block and item code.", e);
         }

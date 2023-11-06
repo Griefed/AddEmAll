@@ -32,14 +32,14 @@ public class FabricGeneration extends ModloaderGeneration implements CodeGenerat
 
     @Override
     public void run() throws IOException {
-        createModBlockPackage();
-        createItemPackage();
-        createModBlocksClass();
-        createModItemsClass();
-        createModloaderClass();
-        updateModBlocksClass();
-        updateModItemsClass();
-        updateModloaderMain();
+//        createModBlockPackage();
+//        createItemPackage();
+//        createModBlocksClass();
+//        createModItemsClass();
+//        createModloaderClass();
+//        updateModBlocksClass();
+//        updateModItemsClass();
+//        updateModloaderMain();
     }
 
     @Override
@@ -79,7 +79,7 @@ public class FabricGeneration extends ModloaderGeneration implements CodeGenerat
         for (BlockDefinition block : getBlockDefinitionParser().getBlocks()) {
             registration = new StringBuilder();
             registration.append("\n\tpublic static final Block ").append(block.getId().toUpperCase()).append("_BLOCK = registerBlock(\"").append(block.getId()).append("_block\",\n")
-                    .append("\t\t\tnew Block(FabricBlockSettings.of(Material.").append(block.getMaterial()).append(").strength(").append(block.getStrength()).append("f).luminance(").append(block.getLightLevel()).append(")\n")
+                    .append("\t\t\tnew Block(FabricBlockSettings.of(Material.").append(block.getMaterial()).append(").strength(").append(block.getStrengthOne()).append("f).luminance(").append(block.getLightLevel()).append(")\n")
                     .append("\t\t\t\t\t.hardness(").append(block.getExplosionResistance()).append(")");
             if (block.isRequiresCorrectTool()) {
                 registration.append(".requiresTool()");

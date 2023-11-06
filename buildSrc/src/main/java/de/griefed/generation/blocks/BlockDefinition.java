@@ -5,7 +5,9 @@ public class BlockDefinition {
     private String id;
     private String translation;
     private String material;
-    private int strength;
+    private String soundType;
+    private int strengthOne;
+    private int strengthTwo;
     private int lightLevel;
     private int explosionResistance;
     private boolean requiresCorrectTool;
@@ -23,8 +25,14 @@ public class BlockDefinition {
         return material;
     }
 
-    public int getStrength() {
-        return strength;
+    public String getSoundType() { return soundType; }
+
+    public int getStrengthOne() {
+        return strengthOne;
+    }
+
+    public int getStrengthTwo() {
+        return strengthTwo;
     }
 
     public int getLightLevel() {

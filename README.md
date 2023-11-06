@@ -7,8 +7,6 @@
 [![](http://cf.way2muchnoise.eu/versions/415747.svg)](https://www.curseforge.com/minecraft/mc-mods/crumbs)
 -->
 
-Assortment of blocks I want to use.
-
 ## What does this mod do?
 
 This mod adds an assortment of blocks I would like to use in Minecraft. Mainly blocks inspired by the aesthetic of Half Life 2's Citadel,
@@ -33,6 +31,6 @@ This guide will show how to import the MultiLoader Template into IntelliJ IDEA. 
 7. Assuming you were able to run the game in step 7 your workspace should now be set up.
 
 ## Development Guide
-When using this template the majority of your mod is developed in the Common project. The Common project is compiled against the vanilla game and is used to hold code that is shared between the different loader-specific versions of your mod. The Common project has no knowledge or access to ModLoader specific code, apis, or concepts. Code that requires something from a specific loader must be done through the project that is specific to that loader, such as the Forge or Fabric project.
 
+When using this template the majority of your mod is developed in the Common project. The Common project is compiled against the vanilla game and is used to hold code that is shared between the different loader-specific versions of your mod. The Common project has no knowledge or access to ModLoader specific code, apis, or concepts. Code that requires something from a specific loader must be done through the project that is specific to that loader, such as the Forge or Fabric project.
 Loader specific projects such as the Forge and Fabric project are used to load the Common project into the game. These projects also define code that is specific to that loader. Loader specific projects can access all of the code in the Common project. It is important to remember that the Common project can not access code from loader specific projects.
