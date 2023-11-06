@@ -47,11 +47,3 @@ jobs:
         with:
           name: Artifacts
           path: Forge/build/libs/
-
-      - name: Build Quilt
-        run: ./gradlew :Quilt:build
-      - name: Capture Quilt build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: Artifacts
-          path: Forge/build/libs/
