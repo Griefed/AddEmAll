@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tutorial_stone",
+    "translation": "Tutorial Stone",
+    "material": "STONE",
+    "strength": 6,
+    "lightLevel": 0,
+    "explosionResistance": 8,
+    "requiresCorrectTool": true,
+    "instabreak": false
+  },
+  {
+    "id": "tutorial_wool",
+    "translation": "Tutorial Wool",
+    "material": "WOOL",
+    "strength": 4,
+    "lightLevel": 5,
+    "explosionResistance": 6,
+    "requiresCorrectTool": false,
+    "instabreak": false
+  },
+  {
+    "id": "tutorial_sand",
+    "translation": "Tutorial Sand",
+    "material": "SAND",
+    "strength": 2,
+    "lightLevel": 12,
+    "explosionResistance": 2,
+    "requiresCorrectTool": false,
+    "instabreak": true
+  }
+]
