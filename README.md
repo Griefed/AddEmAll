@@ -35,3 +35,94 @@ Nothing big. Nothing fancy. Nothing complicated.
 
 The majority of the mod is developed in the Common project. The Common project is compiled against the vanilla game and is used to hold code that is shared between the different loader-specific versions of your mod. The Common project has no knowledge or access to ModLoader specific code, apis, or concepts. Code that requires something from a specific loader must be done through the project that is specific to that loader, such as the Forge or Fabric project.
 Loader specific projects such as the Forge and Fabric project are used to load the Common project into the game. These projects also define code that is specific to that loader. Loader specific projects can access all of the code in the Common project. It is important to remember that the Common project can not access code from loader specific projects.
+
+When adding new blocks, see the list below for available material- and soundtypes.
+
+| Material                    | Sound                |
+|-----------------------------|----------------------|
+| SAND                        | STONE                |
+| AIR                         | AMETHYST             |
+| WOOL                        | AMETHYST_CLUSTER     |
+| STONE                       | ANCIENT_DEBRIS       |
+| AMETHYST                    | ANVIL                |
+| BAMBOO                      | AZALEA               |
+| BAMBOO_SAPLING              | AZALEA_LEAVES        |
+| BARRIER                     | BAMBOO               |
+| BUBBLE_COLUMN               | BAMBOO_SAPLING       |
+| BUILDABLE_GLASS             | BASALT               |
+| CACTUS                      | BIG_DRIPLEAF         |
+| CAKE                        | BONE_BLOCK           |
+| CLAY                        | CALCITE              |
+| CLOTH_DECORATION            | CANDLE               |
+| DECORATION                  | CAVE_VEINS           |
+| DIRT                        | CHAIN                |
+| EGG                         | COPPER               |
+| EXPLOSIVE                   | CROP                 |
+| FIRE                        | DEEPSLATE            |
+| FROGLIGHT                   | DEEPSLATE_BRICKS     |
+| FROGSPAWN                   | DEEPSLATE_TILES      |
+| GLASS                       | DRIPSTONE_BLOCK      |
+| GRASS                       | FLOWERING_AZALEA     |
+| HEAVY_METAL                 | FROGLIGHT            |
+| ICE                         | FROGSPAWN            |
+| ICE_SOLID                   | FUNGUS               |
+| LAVA                        | GILDED_BLACKSTONE    |
+| LEAVES                      | GLASS                |
+| METAL                       | GLOW_LICHEN          |
+| MOSS                        | GRASS                |
+| NETHER_WOOD                 | GRAVEL               |
+| PISTON                      | HANGING_ROOTS        |
+| PLANT                       | HARD_CROP            |
+| PORTAL                      | HONEY_BLOCK          |
+| POWDER_SNOW                 | LADDER               |
+| REPLACEABLE_FIREPROOF_PLANT | LANTERN              |
+| REPLACEABLE_PLANT           | LARGE_AMETHYST_BUD   |
+| REPLACEABLE_WATER_PLANT     | LILY_PAD             |
+| SCULK                       | LODESTONE            |
+| SHULKER_SHELL               | MANGROVE_ROOTS       |
+| SNOW                        | MEDIUM_AMETHYST_BUD  |
+| SPONGE                      | METAL                |
+| STRUCTURAL_AIR              | MOSS                 |
+| TOP_SNOW                    | MOSS_CARPET          |
+| VEGETABLE                   | MUD                  |
+| WATER                       | MUD_BRICKS           |
+| WATER_PLANT                 | MUDDY_MANGROVE_ROOTS |
+| WEB                         | NETHER_BRICKS        |
+| WOOD                        | NETHER_GOLD_ORE      |
+|                             | NETHER_ORE           |
+|                             | NETHER_SPROUTS       |
+|                             | NETHER_WART          |
+|                             | NETHERITE_BLOCK      |
+|                             | NETHERRACK           |
+|                             | NYLIUM               |
+|                             | PACKED_MUD           |
+|                             | POINTED_DRIPSTONE    |
+|                             | POLISHED_DEEPSLATE   |
+|                             | POWDER_SNOW          |
+|                             | ROOTED_DIRT          |
+|                             | ROOTS                |
+|                             | SAND                 |
+|                             | SCAFFOLDING          |
+|                             | SCULK                |
+|                             | SCULK_CATALYST       |
+|                             | SCULK_SENSOR         |
+|                             | SCULK_SHRIEKER       |
+|                             | SCULK_VEIN           |
+|                             | SHROOMLIGHT          |
+|                             | SLIME_BLOCK          |
+|                             | SMALL_AMETHYST_BUD   |
+|                             | SMALL_DRIPLEAF       |
+|                             | SNOW                 |
+|                             | SOUL_SAND            |
+|                             | SOUL_SOIL            |
+|                             | SPORE_BLOSSOM        |
+|                             | STEM                 |
+|                             | SWEET_BERRY_BUSH     |
+|                             | TUFF                 |
+|                             | TWISTING_VINES       |
+|                             | VINE                 |
+|                             | WART_BLOCK           |
+|                             | WEEPING_VINES        |
+|                             | WET_GRASS            |
+|                             | WOOD                 |
+|                             | WOOL                 |
