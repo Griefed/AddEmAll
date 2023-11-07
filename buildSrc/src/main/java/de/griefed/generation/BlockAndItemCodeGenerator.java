@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.json.JsonReadFeature;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.griefed.generation.blocks.BlockDefinitionParser;
+import de.griefed.generation.generator.CommonGeneration;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 
@@ -28,17 +29,12 @@ public class BlockAndItemCodeGenerator implements Plugin<Project> {
         project.getTasks().register("blockAndItemCodeGen", task -> task.doLast(s -> System.out.println("Hello from plugin " + this.getClass().getName())));
         try {
             Properties gradleProperties = new Properties();
-            gradleProperties.load(new FileInputStream(new File(project.getRootDir(),"gradle.properties")));
+            gradleProperties.load(new FileInputStream(new File(project.getRootDir(), "gradle.properties")));
             String modName = gradleProperties.getProperty("mod_name");
+
             BlockDefinitionParser parser = new BlockDefinitionParser(project, objectMapper);
-
             CommonGeneration common = new CommonGeneration(project.findProject("Common"), modName, parser, objectMapper);
-            //FabricGeneration fabric = new FabricGeneration(project.findProject("fabric"), modName, parser, objectMapper);
-            //ForgeGeneration forge = new ForgeGeneration(project.findProject("forge"), modName, parser, objectMapper);
-
             common.run();
-            //fabric.run();
-            //forge.run();
         } catch (IOException e) {
             throw new RuntimeException("Error generating block and item code.", e);
         }

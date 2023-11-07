@@ -1,4 +1,4 @@
-package de.griefed.generation;
+package de.griefed.generation.generator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -11,10 +11,42 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.regex.Pattern;
 
+@SuppressWarnings("unused")
 public abstract class ModloaderGeneration {
 
-    public static final Pattern CODE_REPLACE = Pattern.compile("/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/.*/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/", Pattern.DOTALL);
+    public static final Pattern GENERATED_CODE_PATTERN = Pattern.compile("/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/.*/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/", Pattern.DOTALL);
     public static final Pattern LANG_REPLACE = Pattern.compile("\"DO\\.NOT\\.EDIT\\.MANUALLY\\.BEGIN\": \"BEGIN\".*\"DO\\.NOT\\.EDIT\\.MANUALLY\\.END\": \"END\"", Pattern.DOTALL);
+
+    private static final String BLOCKSTATE_TEMPLATE = """
+            {
+              "variants": {
+                "": { "model": "MODID:block/BLOCKID_block" }
+              }
+            }
+            """;
+
+    private static final String BLOCK_MODELS_TEMPLATE = """
+            {
+              "parent": "block/cube_all",
+              "textures": {
+                "all": "MODID:block/BLOCKID_block"
+              }
+            }
+            """;
+
+    private static final String BLOCK_MODELS_ITEM_TEMPLATE = """
+            {
+              "parent": "MODID:block/BLOCKID_block"
+            }
+            """;
+
+    private static final String TRANSLATION_TEMPLATE = """
+            {
+              "DO.NOT.EDIT.MANUALLY.BEGIN": "BEGIN",
+              GENERATED_TRANSLATION_CODE
+              "DO.NOT.EDIT.MANUALLY.END": "END"
+            }
+            """;
 
     private final Project project;
     private final String modName;
@@ -38,7 +70,7 @@ public abstract class ModloaderGeneration {
         this.project = project;
         this.blockDefinitionParser = parser;
         this.modName = modName;
-        this.subName = modName + project.getName().substring(0,1).toUpperCase() + project.getName().substring(1);
+        this.subName = modName + project.getName().substring(0, 1).toUpperCase() + project.getName().substring(1);
         this.objectMapper = objectMapper;
 
         this.group = project.getGroup().toString();
@@ -50,11 +82,11 @@ public abstract class ModloaderGeneration {
         this.itemGroup = new File(groupDirectory, "item");
         this.modItemsClass = new File(itemGroup, "GeneratedModItems.java");
         if (project.getName().equalsIgnoreCase("common")) {
-            this.modloaderClass = new File(groupDirectory,"CommonClass.java");
+            this.modloaderClass = new File(groupDirectory, "CommonClass.java");
         } else {
             this.modloaderClass = new File(groupDirectory, subName + ".java");
         }
-        this.assetsDirectory = new File(project.getProjectDir(),"src/main/resources/assets/" + id);
+        this.assetsDirectory = new File(project.getProjectDir(), "src/main/resources/assets/" + id);
         this.translationsFile = new File(assetsDirectory, "lang/en_us.json");
     }
 
@@ -86,7 +118,7 @@ public abstract class ModloaderGeneration {
 
     public String readFromFile(File file) throws IOException {
         StringBuilder sb = new StringBuilder();
-        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line = br.readLine();
             while (line != null) {
                 sb.append(line);
@@ -100,13 +132,14 @@ public abstract class ModloaderGeneration {
 
     /**
      * Create all translations required for our blocks and items to work.
+     *
      * @throws IOException when the file could not be created or edited.
      */
     protected void updateTranslations() throws IOException {
         if (!translationsFile.exists() && translationsFile.getParentFile().mkdirs() && translationsFile.createNewFile()) {
             writeToFile(
                     translationsFile,
-                    StringTemplates.TRANSLATION.replace("GENERATED_TRANSLATION_CODE",buildTranslationText())
+                    TRANSLATION_TEMPLATE.replace("GENERATED_TRANSLATION_CODE", buildTranslationText())
             );
         } else {
             String translations = readFromFile(getTranslationsFile());
@@ -114,16 +147,16 @@ public abstract class ModloaderGeneration {
                 //translations file from our generation
                 translations = LANG_REPLACE
                         .matcher(translations)
-                        .replaceAll("\"DO.NOT.EDIT.MANUALLY.BEGIN\": \"BEGIN\",\n" +
-                                        buildTranslationText() + "\n" +
-                                "\"DO.NOT.EDIT.MANUALLY.END\": \"END\"");
-                writeToFile(this.translationsFile,translations);
+                        .replaceAll("\"DO.NOT.EDIT.MANUALLY.BEGIN\": \"BEGIN\"," +
+                                buildTranslationText() +
+                                "  \"DO.NOT.EDIT.MANUALLY.END\": \"END\"");
+                writeToFile(this.translationsFile, translations);
             } else {
                 //translations not from our generation, add our block
                 ObjectNode translationNode = (ObjectNode) objectMapper.readTree(this.translationsFile);
                 String itemPrefix = "\"item." + id + ".";
                 String blockPrefix = "\"block." + id + ".";
-                translationNode.put("DO.NOT.EDIT.MANUALLY.BEGIN","BEGIN");
+                translationNode.put("DO.NOT.EDIT.MANUALLY.BEGIN", "BEGIN");
                 for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
                     translationNode.put(itemPrefix + block.getId() + "_block", block.getTranslation());
                     translationNode.put(blockPrefix + block.getId() + "_block", block.getTranslation());
@@ -134,29 +167,31 @@ public abstract class ModloaderGeneration {
         }
     }
 
-    private String buildTranslationText() {
+    private StringBuilder buildTranslationText() {
         StringBuilder translations = new StringBuilder();
         String itemPrefix = "\"item." + id + ".";
         String blockPrefix = "\"block." + id + ".";
         for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
             //add item
             //key
-            translations.append("\n").append(itemPrefix).append(block.getId()).append("_block").append("\":");
+            translations.append("\n  ").append(itemPrefix).append(block.getId()).append("_block").append("\":");
             //value
-            translations.append(" \"").append(block.getTranslation()).append("\",\n");
+            translations.append(" \"").append(block.getTranslation()).append("\",");
             //add block
             //key
-            translations.append("\n").append(blockPrefix).append(block.getId()).append("_block").append("\":");
+            translations.append("\n  ").append(blockPrefix).append(block.getId()).append("_block").append("\":");
             //value
             translations.append(" \"").append(block.getTranslation()).append("\",\n");
         }
-        return translations.toString();
+        return translations;
     }
 
     /**
      * Create all files required for the added blocks to work.<br>
+     *
      * @throws IOException when the file could not be created or edited.
      */
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public void createBlockFiles() throws IOException {
         File blockstatesDir = new File(assetsDirectory, "blockstates");
         File blockModelsDir = new File(assetsDirectory, "models/block");
@@ -180,13 +215,13 @@ public abstract class ModloaderGeneration {
         for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
             //blockstate
             blockstate = new File(blockstatesDir, blockstatesTemp.replace("BLOCKID", block.getId()));
-            writeToFile(blockstate, StringTemplates.BLOCKSTATE.replace("MODID", id).replace("BLOCKID", block.getId()));
+            writeToFile(blockstate, BLOCKSTATE_TEMPLATE.replace("MODID", id).replace("BLOCKID", block.getId()));
             //block model
             blockModel = new File(blockModelsDir, blockModelTemp.replace("BLOCKID", block.getId()));
-            writeToFile(blockModel, StringTemplates.BLOCK_MODELS.replace("MODID", id).replace("BLOCKID", block.getId()));
+            writeToFile(blockModel, BLOCK_MODELS_TEMPLATE.replace("MODID", id).replace("BLOCKID", block.getId()));
             //item block model
             itemBlockModel = new File(itemModelsDir, itemBlockModelTemp.replace("BLOCKID", block.getId()));
-            writeToFile(itemBlockModel, StringTemplates.BLOCK_MODELS_ITEM.replace("MODID", id).replace("BLOCKID", block.getId()));
+            writeToFile(itemBlockModel, BLOCK_MODELS_ITEM_TEMPLATE.replace("MODID", id).replace("BLOCKID", block.getId()));
             //block texture
             blockTexture = new File(blockTexturesDir, blockTextureTemp.replace("BLOCKID", block.getId()));
             textureSource = new File(blockDefinitionParser.getAssetsDirectory(), block.getId() + ".png");
@@ -197,6 +232,7 @@ public abstract class ModloaderGeneration {
     /**
      * Create all files required for the added items to work.<br>
      * Depending on the modloader, this creates various json-files inside the <code>resources/assets</code>-directory.
+     *
      * @throws IOException when the file could not be created or edited.
      */
     public void createItemFiles() throws IOException {
@@ -266,7 +302,9 @@ public abstract class ModloaderGeneration {
         return modloaderClass;
     }
 
-    public File getAssetsDirectory() { return assetsDirectory; }
+    public File getAssetsDirectory() {
+        return assetsDirectory;
+    }
 
     public File getTranslationsFile() {
         return translationsFile;

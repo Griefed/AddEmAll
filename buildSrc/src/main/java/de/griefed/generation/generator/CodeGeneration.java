@@ -1,4 +1,4 @@
-package de.griefed.generation;
+package de.griefed.generation.generator;
 
 import java.io.IOException;
 
