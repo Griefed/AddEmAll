@@ -146,7 +146,7 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
     @Override
     public void createModBlocksClass() throws IOException {
         if (!getModBlocksClass().exists() && getModBlocksClass().createNewFile()) {
-            System.out.println("ModBlock-class created: " + getModBlocksClass().getAbsolutePath());
+            System.out.println("GeneratedModBlocks-class created: " + getModBlocksClass().getAbsolutePath());
             writeToFile(getModBlocksClass(), commonGeneratedModBlocksClassTemplate);
         }
     }
@@ -154,7 +154,7 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
     @Override
     public void createModItemsClass() throws IOException {
         if (!getModItemsClass().exists() && getModItemsClass().createNewFile()) {
-            System.out.println("ModItems-class created: " + getModItemsClass().getAbsolutePath());
+            System.out.println("GeneratedModItems-class created: " + getModItemsClass().getAbsolutePath());
             writeToFile(getModItemsClass(), commonGeneratedItemsClassTemplate);
         }
     }
@@ -162,7 +162,7 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
     @Override
     public void createModloaderClass() throws IOException {
         if (!getModloaderClass().exists() && getModloaderClass().createNewFile()) {
-            System.out.println("ModItems-class created: " + getModloaderClass().getAbsolutePath());
+            System.out.println("CommonClass-class created: " + getModloaderClass().getAbsolutePath());
             writeToFile(getModloaderClass(), commonClassTemplate);
         }
     }
