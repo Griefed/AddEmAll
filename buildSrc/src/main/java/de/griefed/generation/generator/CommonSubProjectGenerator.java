@@ -129,6 +129,22 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
             .replace("GROUP", getGroup())
             .replace("MODID", getId());
 
+    private static final String BLOCK_REGISTRATION_TEMPLATE = """
+            \tpublic static final RegistryObject<Block> %s = BLOCKS.register("%s_block",
+             \t\t\t() -> new Block(BlockBehaviour.Properties.of(Material.%s).sound(SoundType.%s)
+            				\t.strength(%df, %df).lightLevel(state -> %d).explosionResistance(%df)TOOLBREAK));
+                       """;
+
+    private static final String BLOCK_ITEM_REGISTRATION_TEMPLATE = """
+            \tpublic static final RegistryObject<Item> %s_ITEM = ITEMS.register("%s",
+                \t\t() -> new BlockItem(%s.get(), itemBuilder()));
+                        """;
+
+    private static final String BLOCK_REGISTRATION = """
+            %s
+            %s
+            """;
+
     public void run() throws IOException {
         createModBlockPackage();
         createItemPackage();
@@ -167,38 +183,48 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
         }
     }
 
-    //public static final RegistryObject<Block> SILVERBLOCK = BLOCKS.register("silverblock", () -> new Block(
-    //                        BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.STONE).strength(12f, 10f).requiresCorrectToolForDrops()));
-    //public static final RegistryObject<Item> SILVERBLOCK_ITEM = ITEMS.register("silverblock", () -> new BlockItem(SILVERBLOCK.get(), itemBuilder()));
     @Override
     public void updateModBlocksClass() throws IOException {
         String modBlocks = readFromFile(getModBlocksClass());
         StringBuilder blocks = new StringBuilder();
-        StringBuilder registration;
+        String blockToRegister;
+        String blockItemToRegister;
         for (BlockDefinition block : getBlockDefinitionParser().getBlocks()) {
-            registration = new StringBuilder();
             //block
-            registration.append("\n\tpublic static final RegistryObject<Block> ").append(block.getId().toUpperCase()).append(" = BLOCKS.register(\"").append(block.getId()).append("_block\", () -> new Block(\n")
-                    .append("\t\t\tBlockBehaviour.Properties.of(Material.").append(block.getMaterial()).append(").sound(SoundType.").append(block.getSoundType()).append(").strength(").append(block.getStrengthOne()).append("f, ").append(block.getStrengthTwo()).append("f)\n")
-                    .append("\t\t\t\t\t").append(".lightLevel(state -> ").append(block.getLightLevel()).append(")").append(".explosionResistance(").append(block.getExplosionResistance()).append("f)\n\t\t\t\t\t");
+            blockToRegister = String.format(
+                    BLOCK_REGISTRATION_TEMPLATE,
+                    block.getId().toUpperCase(), block.getId(),
+                    block.getMaterial(), block.getSoundType(), block.getStrengthOne(), block.getStrengthTwo(),
+                    block.getLightLevel(), block.getExplosionResistance());
             if (block.isRequiresCorrectTool()) {
-                registration.append(".requiresCorrectToolForDrops()");
+                blockToRegister = blockToRegister.replace("TOOL", "\n\t\t\t\t\t.requiresCorrectToolForDrops()");
+            } else {
+                blockToRegister = blockToRegister.replace("TOOL", "");
             }
             if (block.isInstabreak()) {
-                registration.append(".instabreak()");
+                blockToRegister = blockToRegister.replace("BREAK", ".instabreak()");
+            } else {
+                blockToRegister = blockToRegister.replace("BREAK", "");
             }
-            registration.append("));\n");
 
             //block item
-            registration.append("\n\tpublic static final RegistryObject<Item> ").append(block.getId().toUpperCase()).append("_ITEM = ITEMS.register(\"").append(block.getId()).append("\", () -> new BlockItem(").append(block.getId().toUpperCase()).append(".get(), itemBuilder()));\n");
+            blockItemToRegister = String.format(
+                    BLOCK_ITEM_REGISTRATION_TEMPLATE,
+                    block.getId().toUpperCase(), block.getId(), block.getId().toUpperCase()
+            );
 
-            blocks.append(registration);
+            //add block and block item
+            blocks.append(String.format(
+                    BLOCK_REGISTRATION,
+                    blockToRegister, blockItemToRegister
+            ));
         }
         modBlocks = GENERATED_CODE_PATTERN
                 .matcher(modBlocks)
-                .replaceAll("/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/" +
-                        blocks +
-                        "\t/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/");
+                .replaceAll(
+                        "/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/\n\n" +
+                                blocks +
+                                "\t/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/");
         writeToFile(getModBlocksClass(), modBlocks);
     }
 
