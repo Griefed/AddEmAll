@@ -12,7 +12,7 @@ import java.nio.file.StandardCopyOption;
 import java.util.regex.Pattern;
 
 @SuppressWarnings("unused")
-public abstract class ModloaderGeneration {
+public abstract class CodeGenerator {
 
     public static final Pattern GENERATED_CODE_PATTERN = Pattern.compile("/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/.*/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/", Pattern.DOTALL);
     public static final Pattern LANG_REPLACE = Pattern.compile("\"DO\\.NOT\\.EDIT\\.MANUALLY\\.BEGIN\": \"BEGIN\".*\"DO\\.NOT\\.EDIT\\.MANUALLY\\.END\": \"END\"", Pattern.DOTALL);
@@ -66,7 +66,7 @@ public abstract class ModloaderGeneration {
     private final File assetsDirectory;
     private final File translationsFile;
 
-    protected ModloaderGeneration(Project project, String modName, BlockDefinitionParser parser, ObjectMapper objectMapper) {
+    protected CodeGenerator(Project project, String modName, BlockDefinitionParser parser, ObjectMapper objectMapper) {
         this.project = project;
         this.blockDefinitionParser = parser;
         this.modName = modName;

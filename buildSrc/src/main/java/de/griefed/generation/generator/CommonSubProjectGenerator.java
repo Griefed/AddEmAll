@@ -7,8 +7,8 @@ import org.gradle.api.Project;
 
 import java.io.IOException;
 
-public class CommonGeneration extends ModloaderGeneration implements CodeGeneration {
-    public CommonGeneration(Project project, String modName, BlockDefinitionParser parser, ObjectMapper objectMapper) {
+public class CommonSubProjectGenerator extends CodeGenerator implements CodeGeneration {
+    public CommonSubProjectGenerator(Project project, String modName, BlockDefinitionParser parser, ObjectMapper objectMapper) {
         super(project, modName, parser, objectMapper);
     }
 
