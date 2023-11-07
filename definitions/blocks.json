@@ -1,38 +1,62 @@
 [
   {
-    "id": "tutorial_stone",
-    "translation": "Tutorial Stone",
-    "material": "STONE",
-    "soundType": "STONE",
-    "strengthOne": 12,
-    "strengthTwo": 10,
-    "lightLevel": 0,
-    "explosionResistance": 8,
-    "requiresCorrectTool": true,
-    "instabreak": false
-  },
-  {
-    "id": "tutorial_wool",
-    "translation": "Tutorial Wool",
-    "material": "WOOL",
-    "soundType": "STONE",
-    "strengthOne": 8,
-    "strengthTwo": 6,
-    "lightLevel": 5,
-    "explosionResistance": 6,
-    "requiresCorrectTool": false,
-    "instabreak": false
-  },
-  {
-    "id": "tutorial_sand",
-    "translation": "Tutorial Sand",
-    "material": "SAND",
-    "soundType": "STONE",
-    "strengthOne": 4,
+    "id": "green_zen",
+    "translation": "Green Zen",
+    "material": "DIRT",
+    "soundType": "GRASS",
+    "strengthOne": 2,
     "strengthTwo": 2,
-    "lightLevel": 12,
-    "explosionResistance": 2,
+    "lightLevel": 4,
+    "explosionResistance": 0,
     "requiresCorrectTool": false,
-    "instabreak": true
+    "instabreak": false
+  },
+  {
+    "id": "yellow_zen",
+    "translation": "Yellow Zen",
+    "material": "DIRT",
+    "soundType": "GRASS",
+    "strengthOne": 2,
+    "strengthTwo": 2,
+    "lightLevel": 4,
+    "explosionResistance": 0,
+    "requiresCorrectTool": false,
+    "instabreak": false
+  },
+  {
+    "id": "blue_zen",
+    "translation": "Blue Zen",
+    "material": "DIRT",
+    "soundType": "GRASS",
+    "strengthOne": 2,
+    "strengthTwo": 2,
+    "lightLevel": 4,
+    "explosionResistance": 0,
+    "requiresCorrectTool": false,
+    "instabreak": false
+  },
+  {
+    "id": "brown_zen",
+    "translation": "Brown Zen",
+    "material": "DIRT",
+    "soundType": "GRASS",
+    "strengthOne": 2,
+    "strengthTwo": 2,
+    "lightLevel": 4,
+    "explosionResistance": 0,
+    "requiresCorrectTool": false,
+    "instabreak": false
+  },
+  {
+    "id": "red_zen",
+    "translation": "Red Zen",
+    "material": "DIRT",
+    "soundType": "GRASS",
+    "strengthOne": 2,
+    "strengthTwo": 2,
+    "lightLevel": 4,
+    "explosionResistance": 0,
+    "requiresCorrectTool": false,
+    "instabreak": false
   }
 ]

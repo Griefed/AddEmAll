@@ -1,13 +1,19 @@
 {
   "DO.NOT.EDIT.MANUALLY.BEGIN": "BEGIN",
-  "item.addemall.tutorial_stone_block": "Tutorial Stone",
-  "block.addemall.tutorial_stone_block": "Tutorial Stone",
+  "item.addemall.green_zen_block": "Green Zen",
+  "block.addemall.green_zen_block": "Green Zen",
 
-  "item.addemall.tutorial_wool_block": "Tutorial Wool",
-  "block.addemall.tutorial_wool_block": "Tutorial Wool",
+  "item.addemall.yellow_zen_block": "Yellow Zen",
+  "block.addemall.yellow_zen_block": "Yellow Zen",
 
-  "item.addemall.tutorial_sand_block": "Tutorial Sand",
-  "block.addemall.tutorial_sand_block": "Tutorial Sand",
+  "item.addemall.blue_zen_block": "Blue Zen",
+  "block.addemall.blue_zen_block": "Blue Zen",
+
+  "item.addemall.brown_zen_block": "Brown Zen",
+  "block.addemall.brown_zen_block": "Brown Zen",
+
+  "item.addemall.red_zen_block": "Red Zen",
+  "block.addemall.red_zen_block": "Red Zen",
   "DO.NOT.EDIT.MANUALLY.END": "END",
   "itemGroup.addemall.tab": "AddEmAll"
 }

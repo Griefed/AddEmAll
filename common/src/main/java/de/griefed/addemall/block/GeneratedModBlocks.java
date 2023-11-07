@@ -17,28 +17,40 @@ public class GeneratedModBlocks {
 
     /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
 
-	public static final RegistryObject<Block> TUTORIAL_STONE = BLOCKS.register( "tutorial_stone_block",
- 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
-					.strength(12f, 10f).lightLevel(state -> 0).explosionResistance(8f)
-					.requiresCorrectToolForDrops()));
+	public static final RegistryObject<Block> GREEN_ZEN = BLOCKS.register("green_zen_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
+					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
 
-	public static final RegistryObject<Item> TUTORIAL_STONE_ITEM = ITEMS.register("tutorial_stone",
-    		() -> new BlockItem(TUTORIAL_STONE.get(), itemBuilder()));
+	public static final RegistryObject<Item> GREEN_ZEN_ITEM = ITEMS.register("green_zen",
+    		() -> new BlockItem(GREEN_ZEN.get(), itemBuilder()));
 
-	public static final RegistryObject<Block> TUTORIAL_WOOL = BLOCKS.register("tutorial_wool_block",
- 			() -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.STONE)
-					.strength(8f, 6f).lightLevel(state -> 5).explosionResistance(6f)));
+	public static final RegistryObject<Block> YELLOW_ZEN = BLOCKS.register("yellow_zen_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
+					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
 
-	public static final RegistryObject<Item> TUTORIAL_WOOL_ITEM = ITEMS.register("tutorial_wool",
-    		() -> new BlockItem(TUTORIAL_WOOL.get(), itemBuilder()));
+	public static final RegistryObject<Item> YELLOW_ZEN_ITEM = ITEMS.register("yellow_zen",
+    		() -> new BlockItem(YELLOW_ZEN.get(), itemBuilder()));
 
-	public static final RegistryObject<Block> TUTORIAL_SAND = BLOCKS.register("tutorial_sand_block",
- 			() -> new Block(BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.STONE)
-					.strength(4f, 2f).lightLevel(state -> 12).explosionResistance(2f)
-					.requiresCorrectToolForDrops().instabreak()));
+	public static final RegistryObject<Block> BLUE_ZEN = BLOCKS.register("blue_zen_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
+					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
 
-	public static final RegistryObject<Item> TUTORIAL_SAND_ITEM = ITEMS.register("tutorial_sand",
-    		() -> new BlockItem(TUTORIAL_SAND.get(), itemBuilder()));
+	public static final RegistryObject<Item> BLUE_ZEN_ITEM = ITEMS.register("blue_zen",
+    		() -> new BlockItem(BLUE_ZEN.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> BROWN_ZEN = BLOCKS.register("brown_zen_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
+					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
+
+	public static final RegistryObject<Item> BROWN_ZEN_ITEM = ITEMS.register("brown_zen",
+    		() -> new BlockItem(BROWN_ZEN.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> RED_ZEN = BLOCKS.register("red_zen_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
+					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
+
+	public static final RegistryObject<Item> RED_ZEN_ITEM = ITEMS.register("red_zen",
+    		() -> new BlockItem(RED_ZEN.get(), itemBuilder()));
 
 	/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
     
