@@ -4,8 +4,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import de.griefed.generation.blocks.BlockDefinition;
 import de.griefed.generation.blocks.BlockDefinitionParser;
+import de.griefed.generation.blocks.TextureScaler;
 import org.gradle.api.Project;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
@@ -212,6 +215,8 @@ public abstract class CodeGenerator {
         File itemBlockModel;
         File blockTexture;
         File textureSource;
+        File textureMCMeta;
+        BufferedImage texture;
         for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
             //blockstate
             blockstate = new File(blockstatesDir, blockstatesTemp.replace("BLOCKID", block.getId()));
@@ -225,6 +230,21 @@ public abstract class CodeGenerator {
             //block texture
             blockTexture = new File(blockTexturesDir, blockTextureTemp.replace("BLOCKID", block.getId()));
             textureSource = new File(blockDefinitionParser.getAssetsDirectory(), block.getId() + ".png");
+            texture = ImageIO.read(textureSource);
+            if (texture.getWidth() > 16 && texture.getHeight() > 16) {
+                texture = TextureScaler.getScaledInstance(texture);
+                ImageIO.write(texture,"png",textureSource);
+            }
+            if (texture.getWidth() < texture.getHeight()) {
+                textureMCMeta = new File(blockTexture.getParent(), blockTexture.getName() + ".mcmeta");
+                textureMCMeta.createNewFile();
+                writeToFile(textureMCMeta,
+                        """
+                                {
+                                  "animation": {}
+                                }
+                                """);
+            }
             Files.copy(textureSource.toPath(), blockTexture.toPath(), StandardCopyOption.REPLACE_EXISTING);
         }
     }
