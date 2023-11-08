@@ -24,7 +24,7 @@ gradlePlugin {
     plugins {
         create("block-and-item-code-generator") {
             id = "de.griefed.generation.block-and-item-code-generator"
-            implementationClass = "de.griefed.generation.BlockAndItemCodeGenerator"
+            implementationClass = "de.griefed.generation.BlockAndItemCodeGeneratorPlugin"
         }
     }
 }
