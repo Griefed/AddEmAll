@@ -58,8 +58,9 @@ Example:
 ```
 2. Afterwards, provide the texture you want your block to use in [definitions/assets/blocks](definitions/assets/blocks)
    1. Textures get automatically scaled down to 16x16
-   2. Textures whose height is larger than their width will get scaled to 16x multiples of 16 automatically, so 16x17 will result in 16x32.
-   3. Textures whose height is larger than their width will automatically have a basic animation
+   2. The filename must match the id of the block added in `1.`, i.e. `some_block.png`
+   3. Textures whose height is larger than their width will get scaled to 16x multiples of 16 automatically, so 16x17 will result in 16x32.
+   4. Textures whose height is larger than their width will automatically have a basic animation
     ```json
     {
       "animation": {}
