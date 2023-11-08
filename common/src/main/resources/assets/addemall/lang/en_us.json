@@ -107,6 +107,9 @@
 
   "item.addemall.generated.metal.metal_wall_15_block": "Metal Wall 15",
   "block.addemall.generated.metal.metal_wall_15_block": "Metal Wall 15",
+
+  "item.addemall.generated.stone.red_stripes_block": "Red Stripes",
+  "block.addemall.generated.stone.red_stripes_block": "Red Stripes",
   "DO.NOT.EDIT.MANUALLY.END": "END",
   "itemGroup.addemall.tab": "AddEmAll"
 }

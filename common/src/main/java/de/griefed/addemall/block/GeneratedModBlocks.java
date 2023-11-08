@@ -300,6 +300,14 @@ public class GeneratedModBlocks {
 	public static final RegistryObject<Item> METAL_WALL_15_ITEM = ITEMS.register("generated/metal/metal_wall_15",
     		() -> new BlockItem(METAL_WALL_15.get(), itemBuilder()));
 
+	public static final RegistryObject<Block> RED_STRIPES = BLOCKS.register("generated/stone/red_stripes_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+					.strength(8f, 8f).lightLevel(state -> 0).explosionResistance(8f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> RED_STRIPES_ITEM = ITEMS.register("generated/stone/red_stripes",
+    		() -> new BlockItem(RED_STRIPES.get(), itemBuilder()));
+
 	/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
     
     private static Item.Properties itemBuilder() {

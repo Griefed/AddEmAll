@@ -430,5 +430,17 @@
     "explosionResistance": 12,
     "requiresCorrectTool": true,
     "instabreak": false
+  },
+  {
+    "id": "red_stripes",
+    "translation": "Red Stripes",
+    "material": "STONE",
+    "soundType": "STONE",
+    "strengthOne": 8,
+    "strengthTwo": 8,
+    "lightLevel": 0,
+    "explosionResistance": 8,
+    "requiresCorrectTool": true,
+    "instabreak": false
   }
 ]
