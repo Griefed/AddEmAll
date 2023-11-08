@@ -12,7 +12,7 @@ jobs:
         # Use these Java versions
         java: [ 17 ]
         # and run on both Linux and Windows
-        os: [ ubuntu-20.04, windows-latest ]
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -25,7 +25,7 @@ jobs:
       - name: Set up JDK ${{ matrix.java }}
         uses: actions/setup-java@v3
         with:
-          distribution: adopt
+          distribution: "temurin"
           java-version: ${{ matrix.java }}
 
       - name: Make gradle wrapper executable
