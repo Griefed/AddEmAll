@@ -14,6 +14,8 @@ Mainly blocks inspired by the aesthetic of Half Life 2's Citadel, as well as oth
 
 Nothing big. Nothing fancy. Nothing complicated.
 
+![showcase](misc/showcase.png)
+
 ## Other Information:
 
 - Report Bugs at https://github.com/Griefed/AddEmAll/issues
