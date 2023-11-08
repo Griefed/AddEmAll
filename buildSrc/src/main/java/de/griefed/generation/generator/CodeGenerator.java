@@ -19,8 +19,14 @@ public abstract class CodeGenerator {
 
     public static final Pattern GENERATED_CODE_PATTERN = Pattern.compile("/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/.*/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/", Pattern.DOTALL);
     public static final Pattern LANG_REPLACE = Pattern.compile("\"DO\\.NOT\\.EDIT\\.MANUALLY\\.BEGIN\": \"BEGIN\".*\"DO\\.NOT\\.EDIT\\.MANUALLY\\.END\": \"END\"", Pattern.DOTALL);
+    public static final String BLOCKSTATES_TEMPLATE = "generated/%s/%s_block.json";
+    public static final String BLOCK_MODEL_TEMPLATE = "generated/%s/%s_block.json";
+    public static final String ITEM_BLOCK_MODEL_TEMPLATE = "generated/%s/%s.json";
+    public static final String BLOCK_TEXTURE_TEMPLATE = "generated/%s/%s_block.png";
+    public static final String ITEM_TRANSLATION_TEMPLATE = "item.%s.generated.%s.%s_block";
+    public static final String BLOCK_TRANSLATION_TEMPLATE = "block.%s.generated.%s.%s_block";
 
-    private static final String BLOCKSTATE_TEMPLATE = """
+    private static final String BLOCKSTATE_FILE_TEMPLATE = """
             {
               "variants": {
                 "": { "model": "%s:block/generated/%s/%s_block" }
@@ -28,7 +34,7 @@ public abstract class CodeGenerator {
             }
             """;
 
-    private static final String BLOCK_MODELS_TEMPLATE = """
+    private static final String BLOCK_MODELS_FILE_TEMPLATE = """
             {
               "parent": "block/cube_all",
               "textures": {
@@ -37,17 +43,22 @@ public abstract class CodeGenerator {
             }
             """;
 
-    private static final String BLOCK_MODELS_ITEM_TEMPLATE = """
+    private static final String BLOCK_MODELS_ITEM_FILE_TEMPLATE = """
             {
               "parent": "%s:block/generated/%s/%s_block"
             }
             """;
 
-    private static final String TRANSLATION_TEMPLATE = """
+    private static final String TRANSLATION_FILE_TEMPLATE = """
             {
               "DO.NOT.EDIT.MANUALLY.BEGIN": "BEGIN",
               GENERATED_TRANSLATION_CODE
               "DO.NOT.EDIT.MANUALLY.END": "END"
+            }
+            """;
+    public static final String ANIMATION_FILE_TEMPLATE = """
+            {
+              "animation": {}
             }
             """;
 
@@ -142,7 +153,7 @@ public abstract class CodeGenerator {
         if (!translationsFile.exists() && translationsFile.getParentFile().mkdirs() && translationsFile.createNewFile()) {
             writeToFile(
                     translationsFile,
-                    TRANSLATION_TEMPLATE.replace("GENERATED_TRANSLATION_CODE", buildTranslationText())
+                    TRANSLATION_FILE_TEMPLATE.replace("GENERATED_TRANSLATION_CODE", buildTranslationText())
             );
         } else {
             String translations = readFromFile(getTranslationsFile());
@@ -157,16 +168,12 @@ public abstract class CodeGenerator {
             } else {
                 //translations not from our generation, add our block
                 ObjectNode translationNode = (ObjectNode) objectMapper.readTree(this.translationsFile);
-                String itemPrefix = "\"item.%s.generated.%s.%s_block";
-                String blockPrefix = "\"block.%s.generated.%s.%s_block\"";
                 translationNode.put("DO.NOT.EDIT.MANUALLY.BEGIN", "BEGIN");
                 for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
                     translationNode.put(
-                            String.format(itemPrefix, id, block.getMaterial().toLowerCase(), block.getId()),
-                            block.getTranslation());
+                            String.format(ITEM_TRANSLATION_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()), block.getTranslation());
                     translationNode.put(
-                            String.format(blockPrefix, id, block.getMaterial().toLowerCase(), block.getId()),
-                            block.getTranslation());
+                            String.format(BLOCK_TRANSLATION_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()), block.getTranslation());
                 }
                 translationNode.put("DO.NOT.EDIT.MANUALLY.END", "END");
                 objectMapper.writeValue(this.translationsFile, translationNode);
@@ -176,17 +183,15 @@ public abstract class CodeGenerator {
 
     private StringBuilder buildTranslationText() {
         StringBuilder translations = new StringBuilder();
-        String itemPrefix = "\"item.%s.generated.%s.%s_block";
-        String blockPrefix = "\"block.%s.generated.%s.%s_block";
         for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
             //add item
             //key
-            translations.append("\n  ").append(String.format(itemPrefix, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
+            translations.append("\n  \"").append(String.format(ITEM_TRANSLATION_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
             //value
             translations.append(" \"").append(block.getTranslation()).append("\",");
             //add block
             //key
-            translations.append("\n  ").append(String.format(blockPrefix, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
+            translations.append("\n  \"").append(String.format(BLOCK_TRANSLATION_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
             //value
             translations.append(" \"").append(block.getTranslation()).append("\",\n");
         }
@@ -210,10 +215,6 @@ public abstract class CodeGenerator {
         itemModelsDir.mkdirs();
         itemTexturesDir.mkdirs();
         blockTexturesDir.mkdirs();
-        String blockstatesTemp = "generated/%s/%s_block.json";
-        String blockModelTemp = "generated/%s/%s_block.json";
-        String itemBlockModelTemp = "generated/%s/%s.json";
-        String blockTextureTemp = "generated/%s/%s_block.png";
         File blockstate;
         File blockModel;
         File itemBlockModel;
@@ -223,22 +224,22 @@ public abstract class CodeGenerator {
         BufferedImage texture;
         for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
             //blockstate
-            blockstate = new File(blockstatesDir, String.format(blockstatesTemp, block.getMaterial().toLowerCase(), block.getId()));
+            blockstate = new File(blockstatesDir, String.format(BLOCKSTATES_TEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
             blockstate.getParentFile().mkdirs();
-            writeToFile(blockstate, String.format(BLOCKSTATE_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
+            writeToFile(blockstate, String.format(BLOCKSTATE_FILE_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
 
             //block model
-            blockModel = new File(blockModelsDir, String.format(blockModelTemp, block.getMaterial().toLowerCase(), block.getId()));
+            blockModel = new File(blockModelsDir, String.format(BLOCK_MODEL_TEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
             blockModel.getParentFile().mkdirs();
-            writeToFile(blockModel, String.format(BLOCK_MODELS_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
+            writeToFile(blockModel, String.format(BLOCK_MODELS_FILE_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
 
             //item block model
-            itemBlockModel = new File(itemModelsDir, String.format(itemBlockModelTemp, block.getMaterial().toLowerCase(), block.getId()));
+            itemBlockModel = new File(itemModelsDir, String.format(ITEM_BLOCK_MODEL_TEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
             itemBlockModel.getParentFile().mkdirs();
-            writeToFile(itemBlockModel, String.format(BLOCK_MODELS_ITEM_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
+            writeToFile(itemBlockModel, String.format(BLOCK_MODELS_ITEM_FILE_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
 
             //block texture
-            blockTexture = new File(blockTexturesDir, String.format(blockTextureTemp, block.getMaterial().toLowerCase(), block.getId()));
+            blockTexture = new File(blockTexturesDir, String.format(BLOCK_TEXTURE_TEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
             blockTexture.getParentFile().mkdirs();
             textureSource = new File(blockDefinitionParser.getAssetsDirectory(), block.getId() + ".png");
             texture = ImageIO.read(textureSource);
@@ -250,11 +251,7 @@ public abstract class CodeGenerator {
                 textureMCMeta = new File(blockTexture.getParent(), blockTexture.getName() + ".mcmeta");
                 textureMCMeta.createNewFile();
                 writeToFile(textureMCMeta,
-                        """
-                                {
-                                  "animation": {}
-                                }
-                                """);
+                        ANIMATION_FILE_TEMPLATE);
             }
             Files.copy(textureSource.toPath(), blockTexture.toPath(), StandardCopyOption.REPLACE_EXISTING);
         }
