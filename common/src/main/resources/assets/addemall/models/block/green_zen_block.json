@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "addemall:block/green_zen_block"
-  }
-}

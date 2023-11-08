@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'java-gradle-plugin'
 }
 
 group = 'de.griefed'
@@ -19,3 +20,11 @@ test {
     useJUnitPlatform()
 }
 
+gradlePlugin {
+    plugins {
+        create("block-and-item-code-generator") {
+            id = "de.griefed.generation.block-and-item-code-generator"
+            implementationClass = "de.griefed.generation.BlockAndItemCodeGenerator"
+        }
+    }
+}

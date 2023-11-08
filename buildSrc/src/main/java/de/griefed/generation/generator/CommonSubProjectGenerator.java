@@ -130,13 +130,13 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
             .replace("MODID", getId());
 
     private static final String BLOCK_REGISTRATION_TEMPLATE = """
-            \tpublic static final RegistryObject<Block> %s = BLOCKS.register("%s_block",
+            \tpublic static final RegistryObject<Block> %s = BLOCKS.register("generated/%s/%s_block",
              \t\t\t() -> new Block(BlockBehaviour.Properties.of(Material.%s).sound(SoundType.%s)
             				\t.strength(%df, %df).lightLevel(state -> %d).explosionResistance(%df)TOOLBREAK));
                        """;
 
     private static final String BLOCK_ITEM_REGISTRATION_TEMPLATE = """
-            \tpublic static final RegistryObject<Item> %s_ITEM = ITEMS.register("%s",
+            \tpublic static final RegistryObject<Item> %s_ITEM = ITEMS.register("generated/%s/%s",
                 \t\t() -> new BlockItem(%s.get(), itemBuilder()));
                         """;
 
@@ -193,7 +193,7 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
             //block
             blockToRegister = String.format(
                     BLOCK_REGISTRATION_TEMPLATE,
-                    block.getId().toUpperCase(), block.getId(),
+                    block.getId().toUpperCase(), block.getMaterial().toLowerCase(), block.getId(),
                     block.getMaterial(), block.getSoundType(), block.getStrengthOne(), block.getStrengthTwo(),
                     block.getLightLevel(), block.getExplosionResistance());
             if (block.isRequiresCorrectTool()) {
@@ -210,7 +210,7 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
             //block item
             blockItemToRegister = String.format(
                     BLOCK_ITEM_REGISTRATION_TEMPLATE,
-                    block.getId().toUpperCase(), block.getId(), block.getId().toUpperCase()
+                    block.getId().toUpperCase(), block.getMaterial().toLowerCase(), block.getId(), block.getId().toUpperCase()
             );
 
             //add block and block item

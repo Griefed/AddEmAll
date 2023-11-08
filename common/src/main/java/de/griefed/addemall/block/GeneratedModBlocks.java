@@ -17,39 +17,39 @@ public class GeneratedModBlocks {
 
     /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
 
-	public static final RegistryObject<Block> GREEN_ZEN = BLOCKS.register("green_zen_block",
+	public static final RegistryObject<Block> GREEN_ZEN = BLOCKS.register("generated/dirt/green_zen_block",
  			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
 					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
 
-	public static final RegistryObject<Item> GREEN_ZEN_ITEM = ITEMS.register("green_zen",
+	public static final RegistryObject<Item> GREEN_ZEN_ITEM = ITEMS.register("generated/dirt/green_zen",
     		() -> new BlockItem(GREEN_ZEN.get(), itemBuilder()));
 
-	public static final RegistryObject<Block> YELLOW_ZEN = BLOCKS.register("yellow_zen_block",
+	public static final RegistryObject<Block> YELLOW_ZEN = BLOCKS.register("generated/dirt/yellow_zen_block",
  			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
 					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
 
-	public static final RegistryObject<Item> YELLOW_ZEN_ITEM = ITEMS.register("yellow_zen",
+	public static final RegistryObject<Item> YELLOW_ZEN_ITEM = ITEMS.register("generated/dirt/yellow_zen",
     		() -> new BlockItem(YELLOW_ZEN.get(), itemBuilder()));
 
-	public static final RegistryObject<Block> BLUE_ZEN = BLOCKS.register("blue_zen_block",
+	public static final RegistryObject<Block> BLUE_ZEN = BLOCKS.register("generated/dirt/blue_zen_block",
  			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
 					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
 
-	public static final RegistryObject<Item> BLUE_ZEN_ITEM = ITEMS.register("blue_zen",
+	public static final RegistryObject<Item> BLUE_ZEN_ITEM = ITEMS.register("generated/dirt/blue_zen",
     		() -> new BlockItem(BLUE_ZEN.get(), itemBuilder()));
 
-	public static final RegistryObject<Block> BROWN_ZEN = BLOCKS.register("brown_zen_block",
+	public static final RegistryObject<Block> BROWN_ZEN = BLOCKS.register("generated/dirt/brown_zen_block",
  			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
 					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
 
-	public static final RegistryObject<Item> BROWN_ZEN_ITEM = ITEMS.register("brown_zen",
+	public static final RegistryObject<Item> BROWN_ZEN_ITEM = ITEMS.register("generated/dirt/brown_zen",
     		() -> new BlockItem(BROWN_ZEN.get(), itemBuilder()));
 
-	public static final RegistryObject<Block> RED_ZEN = BLOCKS.register("red_zen_block",
+	public static final RegistryObject<Block> RED_ZEN = BLOCKS.register("generated/dirt/red_zen_block",
  			() -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)
 					.strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
 
-	public static final RegistryObject<Item> RED_ZEN_ITEM = ITEMS.register("red_zen",
+	public static final RegistryObject<Item> RED_ZEN_ITEM = ITEMS.register("generated/dirt/red_zen",
     		() -> new BlockItem(RED_ZEN.get(), itemBuilder()));
 
 	/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
