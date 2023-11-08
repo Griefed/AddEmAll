@@ -36,6 +36,36 @@ Nothing big. Nothing fancy. Nothing complicated.
 The majority of the mod is developed in the Common project. The Common project is compiled against the vanilla game and is used to hold code that is shared between the different loader-specific versions of your mod. The Common project has no knowledge or access to ModLoader specific code, apis, or concepts. Code that requires something from a specific loader must be done through the project that is specific to that loader, such as the Forge or Fabric project.
 Loader specific projects such as the Forge and Fabric project are used to load the Common project into the game. These projects also define code that is specific to that loader. Loader specific projects can access all of the code in the Common project. It is important to remember that the Common project can not access code from loader specific projects.
 
+## Adding blocks
+
+In order to add a new block, all you have to do is:
+
+1. Edit the [definitions/blocks.json](definitions/blocks.json) and add a new entry for your block. Make sure to provide valid JSON.
+Example:
+```json
+{
+    "id": "some_block",
+    "translation": "Some Block",
+    "material": "DIRT",
+    "soundType": "GRASS",
+    "strengthOne": 2,
+    "strengthTwo": 2,
+    "lightLevel": 0,
+    "explosionResistance": 0,
+    "requiresCorrectTool": false,
+    "instabreak": false
+  }
+```
+2. Afterwards, provide the texture you want your block to use in [definitions/assets/blocks](definitions/assets/blocks)
+   1. Textures get automatically scaled down to 16x16
+   2. Textures whose height is larger than their width will get scaled to 16x multiples of 16 automatically, so 16x17 will result in 16x32.
+   3. Textures whose height is larger than their width will automatically have a basic animation
+    ```json
+    {
+      "animation": {}
+    }
+   ```
+
 When adding new blocks, see the list below for available material- and soundtypes.
 
 | Material                    | Sound                |
