@@ -52,6 +52,254 @@ public class GeneratedModBlocks {
 	public static final RegistryObject<Item> RED_ZEN_ITEM = ITEMS.register("generated/dirt/red_zen",
     		() -> new BlockItem(RED_ZEN.get(), itemBuilder()));
 
+	public static final RegistryObject<Block> METAL_FLOOR_1 = BLOCKS.register("generated/metal/metal_floor_1_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_FLOOR_1_ITEM = ITEMS.register("generated/metal/metal_floor_1",
+    		() -> new BlockItem(METAL_FLOOR_1.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_FLOOR_2 = BLOCKS.register("generated/metal/metal_floor_2_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_FLOOR_2_ITEM = ITEMS.register("generated/metal/metal_floor_2",
+    		() -> new BlockItem(METAL_FLOOR_2.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_FLOOR_3 = BLOCKS.register("generated/metal/metal_floor_3_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_FLOOR_3_ITEM = ITEMS.register("generated/metal/metal_floor_3",
+    		() -> new BlockItem(METAL_FLOOR_3.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_FLOOR_4 = BLOCKS.register("generated/metal/metal_floor_4_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_FLOOR_4_ITEM = ITEMS.register("generated/metal/metal_floor_4",
+    		() -> new BlockItem(METAL_FLOOR_4.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_FLOOR_5 = BLOCKS.register("generated/metal/metal_floor_5_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_FLOOR_5_ITEM = ITEMS.register("generated/metal/metal_floor_5",
+    		() -> new BlockItem(METAL_FLOOR_5.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_FLOOR_6 = BLOCKS.register("generated/metal/metal_floor_6_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_FLOOR_6_ITEM = ITEMS.register("generated/metal/metal_floor_6",
+    		() -> new BlockItem(METAL_FLOOR_6.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_PLATING_1 = BLOCKS.register("generated/metal/metal_plating_1_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_PLATING_1_ITEM = ITEMS.register("generated/metal/metal_plating_1",
+    		() -> new BlockItem(METAL_PLATING_1.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_PLATING_2 = BLOCKS.register("generated/metal/metal_plating_2_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_PLATING_2_ITEM = ITEMS.register("generated/metal/metal_plating_2",
+    		() -> new BlockItem(METAL_PLATING_2.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_PLATING_3 = BLOCKS.register("generated/metal/metal_plating_3_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_PLATING_3_ITEM = ITEMS.register("generated/metal/metal_plating_3",
+    		() -> new BlockItem(METAL_PLATING_3.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_PLATING_4 = BLOCKS.register("generated/metal/metal_plating_4_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_PLATING_4_ITEM = ITEMS.register("generated/metal/metal_plating_4",
+    		() -> new BlockItem(METAL_PLATING_4.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_ROOF_1 = BLOCKS.register("generated/metal/metal_roof_1_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_ROOF_1_ITEM = ITEMS.register("generated/metal/metal_roof_1",
+    		() -> new BlockItem(METAL_ROOF_1.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_ROOF_2 = BLOCKS.register("generated/metal/metal_roof_2_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_ROOF_2_ITEM = ITEMS.register("generated/metal/metal_roof_2",
+    		() -> new BlockItem(METAL_ROOF_2.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_ROOF_3 = BLOCKS.register("generated/metal/metal_roof_3_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_ROOF_3_ITEM = ITEMS.register("generated/metal/metal_roof_3",
+    		() -> new BlockItem(METAL_ROOF_3.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_ROOF_4 = BLOCKS.register("generated/metal/metal_roof_4_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_ROOF_4_ITEM = ITEMS.register("generated/metal/metal_roof_4",
+    		() -> new BlockItem(METAL_ROOF_4.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_ROOF_5 = BLOCKS.register("generated/metal/metal_roof_5_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_ROOF_5_ITEM = ITEMS.register("generated/metal/metal_roof_5",
+    		() -> new BlockItem(METAL_ROOF_5.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_VENT_1 = BLOCKS.register("generated/metal/metal_vent_1_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_VENT_1_ITEM = ITEMS.register("generated/metal/metal_vent_1",
+    		() -> new BlockItem(METAL_VENT_1.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_1 = BLOCKS.register("generated/metal/metal_wall_1_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_1_ITEM = ITEMS.register("generated/metal/metal_wall_1",
+    		() -> new BlockItem(METAL_WALL_1.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_2 = BLOCKS.register("generated/metal/metal_wall_2_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_2_ITEM = ITEMS.register("generated/metal/metal_wall_2",
+    		() -> new BlockItem(METAL_WALL_2.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_3 = BLOCKS.register("generated/metal/metal_wall_3_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_3_ITEM = ITEMS.register("generated/metal/metal_wall_3",
+    		() -> new BlockItem(METAL_WALL_3.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_4 = BLOCKS.register("generated/metal/metal_wall_4_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_4_ITEM = ITEMS.register("generated/metal/metal_wall_4",
+    		() -> new BlockItem(METAL_WALL_4.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_5 = BLOCKS.register("generated/metal/metal_wall_5_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_5_ITEM = ITEMS.register("generated/metal/metal_wall_5",
+    		() -> new BlockItem(METAL_WALL_5.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_6 = BLOCKS.register("generated/metal/metal_wall_6_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_6_ITEM = ITEMS.register("generated/metal/metal_wall_6",
+    		() -> new BlockItem(METAL_WALL_6.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_7 = BLOCKS.register("generated/metal/metal_wall_7_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_7_ITEM = ITEMS.register("generated/metal/metal_wall_7",
+    		() -> new BlockItem(METAL_WALL_7.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_8 = BLOCKS.register("generated/metal/metal_wall_8_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_8_ITEM = ITEMS.register("generated/metal/metal_wall_8",
+    		() -> new BlockItem(METAL_WALL_8.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_9 = BLOCKS.register("generated/metal/metal_wall_9_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_9_ITEM = ITEMS.register("generated/metal/metal_wall_9",
+    		() -> new BlockItem(METAL_WALL_9.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_10 = BLOCKS.register("generated/metal/metal_wall_10_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_10_ITEM = ITEMS.register("generated/metal/metal_wall_10",
+    		() -> new BlockItem(METAL_WALL_10.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_11 = BLOCKS.register("generated/metal/metal_wall_11_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_11_ITEM = ITEMS.register("generated/metal/metal_wall_11",
+    		() -> new BlockItem(METAL_WALL_11.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_12 = BLOCKS.register("generated/metal/metal_wall_12_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_12_ITEM = ITEMS.register("generated/metal/metal_wall_12",
+    		() -> new BlockItem(METAL_WALL_12.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_13 = BLOCKS.register("generated/metal/metal_wall_13_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_13_ITEM = ITEMS.register("generated/metal/metal_wall_13",
+    		() -> new BlockItem(METAL_WALL_13.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_14 = BLOCKS.register("generated/metal/metal_wall_14_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_14_ITEM = ITEMS.register("generated/metal/metal_wall_14",
+    		() -> new BlockItem(METAL_WALL_14.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> METAL_WALL_15 = BLOCKS.register("generated/metal/metal_wall_15_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL)
+					.strength(12f, 12f).lightLevel(state -> 0).explosionResistance(12f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> METAL_WALL_15_ITEM = ITEMS.register("generated/metal/metal_wall_15",
+    		() -> new BlockItem(METAL_WALL_15.get(), itemBuilder()));
+
 	/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
     
     private static Item.Properties itemBuilder() {

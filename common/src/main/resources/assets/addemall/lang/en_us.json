@@ -14,6 +14,99 @@
 
   "item.addemall.generated.dirt.red_zen_block": "Red Zen",
   "block.addemall.generated.dirt.red_zen_block": "Red Zen",
+
+  "item.addemall.generated.metal.metal_floor_1_block": "Metal Floor 1",
+  "block.addemall.generated.metal.metal_floor_1_block": "Metal Floor 1",
+
+  "item.addemall.generated.metal.metal_floor_2_block": "Metal Floor 2",
+  "block.addemall.generated.metal.metal_floor_2_block": "Metal Floor 2",
+
+  "item.addemall.generated.metal.metal_floor_3_block": "Metal Floor 3",
+  "block.addemall.generated.metal.metal_floor_3_block": "Metal Floor 3",
+
+  "item.addemall.generated.metal.metal_floor_4_block": "Metal Floor 4",
+  "block.addemall.generated.metal.metal_floor_4_block": "Metal Floor 4",
+
+  "item.addemall.generated.metal.metal_floor_5_block": "Metal Floor 5",
+  "block.addemall.generated.metal.metal_floor_5_block": "Metal Floor 5",
+
+  "item.addemall.generated.metal.metal_floor_6_block": "Metal Floor 6",
+  "block.addemall.generated.metal.metal_floor_6_block": "Metal Floor 6",
+
+  "item.addemall.generated.metal.metal_plating_1_block": "Metal Plating 1",
+  "block.addemall.generated.metal.metal_plating_1_block": "Metal Plating 1",
+
+  "item.addemall.generated.metal.metal_plating_2_block": "Metal Plating 2",
+  "block.addemall.generated.metal.metal_plating_2_block": "Metal Plating 2",
+
+  "item.addemall.generated.metal.metal_plating_3_block": "Metal Plating 3",
+  "block.addemall.generated.metal.metal_plating_3_block": "Metal Plating 3",
+
+  "item.addemall.generated.metal.metal_plating_4_block": "Metal Plating 4",
+  "block.addemall.generated.metal.metal_plating_4_block": "Metal Plating 4",
+
+  "item.addemall.generated.metal.metal_roof_1_block": "Metal Roof 1",
+  "block.addemall.generated.metal.metal_roof_1_block": "Metal Roof 1",
+
+  "item.addemall.generated.metal.metal_roof_2_block": "Metal Roof 2",
+  "block.addemall.generated.metal.metal_roof_2_block": "Metal Roof 2",
+
+  "item.addemall.generated.metal.metal_roof_3_block": "Metal Roof 3",
+  "block.addemall.generated.metal.metal_roof_3_block": "Metal Roof 3",
+
+  "item.addemall.generated.metal.metal_roof_4_block": "Metal Roof 4",
+  "block.addemall.generated.metal.metal_roof_4_block": "Metal Roof 4",
+
+  "item.addemall.generated.metal.metal_roof_5_block": "Metal Roof 5",
+  "block.addemall.generated.metal.metal_roof_5_block": "Metal Roof 5",
+
+  "item.addemall.generated.metal.metal_vent_1_block": "Metal Vent 1",
+  "block.addemall.generated.metal.metal_vent_1_block": "Metal Vent 1",
+
+  "item.addemall.generated.metal.metal_wall_1_block": "Metal Wall 1",
+  "block.addemall.generated.metal.metal_wall_1_block": "Metal Wall 1",
+
+  "item.addemall.generated.metal.metal_wall_2_block": "Metal Wall 2",
+  "block.addemall.generated.metal.metal_wall_2_block": "Metal Wall 2",
+
+  "item.addemall.generated.metal.metal_wall_3_block": "Metal Wall 3",
+  "block.addemall.generated.metal.metal_wall_3_block": "Metal Wall 3",
+
+  "item.addemall.generated.metal.metal_wall_4_block": "Metal Wall 4",
+  "block.addemall.generated.metal.metal_wall_4_block": "Metal Wall 4",
+
+  "item.addemall.generated.metal.metal_wall_5_block": "Metal Wall 5",
+  "block.addemall.generated.metal.metal_wall_5_block": "Metal Wall 5",
+
+  "item.addemall.generated.metal.metal_wall_6_block": "Metal Wall 6",
+  "block.addemall.generated.metal.metal_wall_6_block": "Metal Wall 6",
+
+  "item.addemall.generated.metal.metal_wall_7_block": "Metal Wall 7",
+  "block.addemall.generated.metal.metal_wall_7_block": "Metal Wall 7",
+
+  "item.addemall.generated.metal.metal_wall_8_block": "Metal Wall 8",
+  "block.addemall.generated.metal.metal_wall_8_block": "Metal Wall 8",
+
+  "item.addemall.generated.metal.metal_wall_9_block": "Metal Wall 9",
+  "block.addemall.generated.metal.metal_wall_9_block": "Metal Wall 9",
+
+  "item.addemall.generated.metal.metal_wall_10_block": "Metal Wall 10",
+  "block.addemall.generated.metal.metal_wall_10_block": "Metal Wall 10",
+
+  "item.addemall.generated.metal.metal_wall_11_block": "Metal Wall 11",
+  "block.addemall.generated.metal.metal_wall_11_block": "Metal Wall 11",
+
+  "item.addemall.generated.metal.metal_wall_12_block": "Metal Wall 12",
+  "block.addemall.generated.metal.metal_wall_12_block": "Metal Wall 12",
+
+  "item.addemall.generated.metal.metal_wall_13_block": "Metal Wall 13",
+  "block.addemall.generated.metal.metal_wall_13_block": "Metal Wall 13",
+
+  "item.addemall.generated.metal.metal_wall_14_block": "Metal Wall 14",
+  "block.addemall.generated.metal.metal_wall_14_block": "Metal Wall 14",
+
+  "item.addemall.generated.metal.metal_wall_15_block": "Metal Wall 15",
+  "block.addemall.generated.metal.metal_wall_15_block": "Metal Wall 15",
   "DO.NOT.EDIT.MANUALLY.END": "END",
   "itemGroup.addemall.tab": "AddEmAll"
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "addemall:block/generated/metal/metal_roof_4_block"
+  }
+}
