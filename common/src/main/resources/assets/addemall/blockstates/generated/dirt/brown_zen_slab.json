@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "addemall:block/generated/dirt/brown_zen_slab"
+    },
+    "type=double": {
+      "model": "addemall:block/generated/dirt/brown_zen_block"
+    },
+    "type=top": {
+      "model": "addemall:block/generated/dirt/brown_zen_slab_top"
+    }
+  }
+}

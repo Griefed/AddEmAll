@@ -6,12 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.griefed.generation.blocks.BlockDefinitionParser;
 import de.griefed.generation.generator.CommonSubProjectGenerator;
 import org.gradle.api.DefaultTask;
-import org.gradle.api.Project;
 import org.gradle.api.tasks.TaskAction;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 public class GenerateBlocksAndItemsCode extends DefaultTask {
@@ -27,11 +25,10 @@ public class GenerateBlocksAndItemsCode extends DefaultTask {
             Properties gradleProperties = new Properties();
             gradleProperties.load(new FileInputStream(new File(getProject().getRootDir(), "gradle.properties")));
             String modName = gradleProperties.getProperty("mod_name");
-
-            BlockDefinitionParser parser = new BlockDefinitionParser(getProject(), objectMapper);
+            BlockDefinitionParser parser = new BlockDefinitionParser(getProject());
             CommonSubProjectGenerator common = new CommonSubProjectGenerator(getProject().findProject("Common"), modName, parser, objectMapper);
             common.run();
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new RuntimeException("Error generating block and item code.", e);
         }
     }

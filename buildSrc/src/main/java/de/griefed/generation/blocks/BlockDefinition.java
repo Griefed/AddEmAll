@@ -2,6 +2,36 @@ package de.griefed.generation.blocks;
 
 public class BlockDefinition {
 
+    public BlockDefinition(String id,
+                           String translation,
+                           String material,
+                           String soundType,
+                           int strengthOne,
+                           int strengthTwo,
+                           int lightLevel,
+                           int explosionResistance,
+                           boolean requiresCorrectTool,
+                           boolean instabreak,
+                           boolean generateSlab,
+                           boolean generateStair
+    ) {
+        this.id = id;
+        this.translation = translation;
+        this.material = material;
+        this.soundType = soundType;
+        this.strengthOne = strengthOne;
+        this.strengthTwo = strengthTwo;
+        this.lightLevel = lightLevel;
+        this.explosionResistance = explosionResistance;
+        this.requiresCorrectTool = requiresCorrectTool;
+        this.instabreak = instabreak;
+        this.generateSlab = generateSlab;
+        this.generateStair = generateStair;
+    }
+
+    public BlockDefinition() {
+    }
+
     private String id;
     private String translation;
     private String material;
@@ -12,6 +42,8 @@ public class BlockDefinition {
     private int explosionResistance;
     private boolean requiresCorrectTool;
     private boolean instabreak;
+    private boolean generateSlab;
+    private boolean generateStair;
 
     public String getId() {
         return id;
@@ -25,7 +57,9 @@ public class BlockDefinition {
         return material;
     }
 
-    public String getSoundType() { return soundType; }
+    public String getSoundType() {
+        return soundType;
+    }
 
     public int getStrengthOne() {
         return strengthOne;
@@ -49,5 +83,13 @@ public class BlockDefinition {
 
     public boolean isInstabreak() {
         return instabreak;
+    }
+
+    public boolean generateSlab() {
+        return generateSlab;
+    }
+
+    public boolean generateStair() {
+        return generateStair;
     }
 }

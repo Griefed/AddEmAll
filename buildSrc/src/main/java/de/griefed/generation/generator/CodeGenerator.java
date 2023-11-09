@@ -1,7 +1,6 @@
 package de.griefed.generation.generator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import de.griefed.generation.blocks.BlockDefinition;
 import de.griefed.generation.blocks.BlockDefinitionParser;
 import de.griefed.generation.blocks.TextureScaler;
@@ -19,22 +18,270 @@ public abstract class CodeGenerator {
 
     public static final Pattern GENERATED_CODE_PATTERN = Pattern.compile("/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/.*/\\*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###\\*/", Pattern.DOTALL);
     public static final Pattern LANG_REPLACE = Pattern.compile("\"DO\\.NOT\\.EDIT\\.MANUALLY\\.BEGIN\": \"BEGIN\".*\"DO\\.NOT\\.EDIT\\.MANUALLY\\.END\": \"END\"", Pattern.DOTALL);
-    public static final String BLOCKSTATES_TEMPLATE = "generated/%s/%s_block.json";
-    public static final String BLOCK_MODEL_TEMPLATE = "generated/%s/%s_block.json";
-    public static final String ITEM_BLOCK_MODEL_TEMPLATE = "generated/%s/%s.json";
-    public static final String BLOCK_TEXTURE_TEMPLATE = "generated/%s/%s_block.png";
-    public static final String ITEM_TRANSLATION_TEMPLATE = "item.%s.generated.%s.%s_block";
-    public static final String BLOCK_TRANSLATION_TEMPLATE = "block.%s.generated.%s.%s_block";
 
-    private static final String BLOCKSTATE_FILE_TEMPLATE = """
+    public static final String BLOCKSTATES_FILETEMPLATE = "generated/%s/%s_block.json";
+    public static final String BLOCKSTATES_SLAB_FILETEMPLATE = "generated/%s/%s_slab.json";
+    public static final String BLOCKSTATES_STAIRS_FILETEMPLATE = "generated/%s/%s_stairs.json";
+
+    public static final String BLOCK_MODEL_FILETEMPLATE = "generated/%s/%s_block.json";
+    public static final String BLOCK_MODEL_SLAB_FILETEMPLATE = "generated/%s/%s_slab.json";
+    public static final String BLOCK_MODEL_SLAB_TOP_FILETEMPLATE = "generated/%s/%s_slab_top.json";
+    public static final String BLOCK_MODEL_STAIRS_FILETEMPLATE = "generated/%s/%s_stairs.json";
+    public static final String BLOCK_MODEL_STAIRS_INNER_FILETEMPLATE = "generated/%s/%s_stairs_inner.json";
+    public static final String BLOCK_MODEL_STAIRS_OUTER_FILETEMPLATE = "generated/%s/%s_stairs_outer.json";
+
+    public static final String ITEM_BLOCK_MODEL_FILETEMPLATE = "generated/%s/%s.json";
+    public static final String ITEM_BLOCK_MODEL_SLAB_FILETEMPLATE = "generated/%s/%s_slab.json";
+    public static final String ITEM_BLOCK_MODEL_STAIRS_FILETEMPLATE = "generated/%s/%s_stairs.json";
+
+    public static final String BLOCK_TEXTURE_FILETEMPLATE = "generated/%s/%s_block.png";
+
+    public static final String ITEM_TRANSLATION_KEY_TEMPLATE = "item.%s.generated.%s.%s_block";
+    public static final String ITEM_SLAB_TRANSLATION_KEY_TEMPLATE = "item.%s.generated.%s.%s_slab";
+    public static final String ITEM_STAIRS_TRANSLATION_KEY_TEMPLATE = "item.%s.generated.%s.%s_stairs";
+
+    public static final String BLOCK_TRANSLATION_KEY_TEMPLATE = "block.%s.generated.%s.%s_block";
+    public static final String BLOCK_SLAB_TRANSLATION_KEY_TEMPLATE = "block.%s.generated.%s.%s_slab";
+    public static final String BLOCK_STAIRS_TRANSLATION_KEY_TEMPLATE = "block.%s.generated.%s.%s_stairs";
+    public static final String ANIMATION_CONTENT_TEMPLATE = """
+            {
+              "animation": {}
+            }
+            """;
+    private static final String BLOCKSTATE_CONTENT_TEMPLATE = """
             {
               "variants": {
                 "": { "model": "%s:block/generated/%s/%s_block" }
               }
             }
             """;
-
-    private static final String BLOCK_MODELS_FILE_TEMPLATE = """
+    private static final String BLOCKSTATE_SLAB_CONTENT_TEMPLATE = """
+            {
+              "variants": {
+                "type=bottom": {
+                  "model": "%s:block/generated/%s/%s_slab"
+                },
+                "type=double": {
+                  "model": "%s:block/generated/%s/%s_block"
+                },
+                "type=top": {
+                  "model": "%s:block/generated/%s/%s_slab_top"
+                }
+              }
+            }
+            """;
+    private static final String BLOCKSTATE_STAIRS_CONTENT_TEMPLATE = """
+            {
+              "variants": {
+                "facing=east,half=bottom,shape=inner_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=east,half=bottom,shape=inner_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner"
+                },
+                "facing=east,half=bottom,shape=outer_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=east,half=bottom,shape=outer_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer"
+                },
+                "facing=east,half=bottom,shape=straight": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs"
+                },
+                "facing=east,half=top,shape=inner_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "x": 180,
+                  "uvlock": true
+                },
+                "facing=east,half=top,shape=inner_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "x": 180,
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=east,half=top,shape=outer_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "x": 180,
+                  "uvlock": true
+                },
+                "facing=east,half=top,shape=outer_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "x": 180,
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=east,half=top,shape=straight": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs",
+                  "x": 180,
+                  "uvlock": true
+                },
+                "facing=north,half=bottom,shape=inner_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "y": 180,
+                  "uvlock": true
+                },
+                "facing=north,half=bottom,shape=inner_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=north,half=bottom,shape=outer_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "y": 180,
+                  "uvlock": true
+                },
+                "facing=north,half=bottom,shape=outer_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=north,half=bottom,shape=straight": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs",
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=north,half=top,shape=inner_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "x": 180,
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=north,half=top,shape=inner_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "x": 180,
+                  "uvlock": true
+                },
+                "facing=north,half=top,shape=outer_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "x": 180,
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=north,half=top,shape=outer_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "x": 180,
+                  "uvlock": true
+                },
+                "facing=north,half=top,shape=straight": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs",
+                  "x": 180,
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=south,half=bottom,shape=inner_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner"
+                },
+                "facing=south,half=bottom,shape=inner_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=south,half=bottom,shape=outer_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer"
+                },
+                "facing=south,half=bottom,shape=outer_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=south,half=bottom,shape=straight": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs",
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=south,half=top,shape=inner_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "x": 180,
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=south,half=top,shape=inner_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "x": 180,
+                  "y": 180,
+                  "uvlock": true
+                },
+                "facing=south,half=top,shape=outer_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "x": 180,
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=south,half=top,shape=outer_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "x": 180,
+                  "y": 180,
+                  "uvlock": true
+                },
+                "facing=south,half=top,shape=straight": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs",
+                  "x": 180,
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=west,half=bottom,shape=inner_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=west,half=bottom,shape=inner_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "y": 180,
+                  "uvlock": true
+                },
+                "facing=west,half=bottom,shape=outer_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "y": 90,
+                  "uvlock": true
+                },
+                "facing=west,half=bottom,shape=outer_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "y": 180,
+                  "uvlock": true
+                },
+                "facing=west,half=bottom,shape=straight": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs",
+                  "y": 180,
+                  "uvlock": true
+                },
+                "facing=west,half=top,shape=inner_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "x": 180,
+                  "y": 180,
+                  "uvlock": true
+                },
+                "facing=west,half=top,shape=inner_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_inner",
+                  "x": 180,
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=west,half=top,shape=outer_left": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "x": 180,
+                  "y": 180,
+                  "uvlock": true
+                },
+                "facing=west,half=top,shape=outer_right": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs_outer",
+                  "x": 180,
+                  "y": 270,
+                  "uvlock": true
+                },
+                "facing=west,half=top,shape=straight": {
+                  "model": "MODID:block/generated/MATERIAL/BLOCKID_stairs",
+                  "x": 180,
+                  "y": 180,
+                  "uvlock": true
+                }
+              }
+            }
+            """;
+    private static final String BLOCK_MODELS_CONTENT_TEMPLATE = """
             {
               "parent": "block/cube_all",
               "textures": {
@@ -42,26 +289,78 @@ public abstract class CodeGenerator {
               }
             }
             """;
-
-    private static final String BLOCK_MODELS_ITEM_FILE_TEMPLATE = """
+    private static final String BLOCK_MODELS_SLAB_CONTENT_TEMPLATE = """
+            {
+              "parent": "minecraft:block/slab",
+              "textures": {
+                "bottom": "%s:block/generated/%s/%s_block",
+                "top": "%s:block/generated/%s/%s_block",
+                "side": "%s:block/generated/%s/%s_block"
+              }
+            }
+            """;
+    private static final String BLOCK_MODELS_STAIRS_TEMPLATE = """
+            {
+              "parent": "minecraft:block/stairs",
+              "textures": {
+                "bottom": "%s:block/generated/%s/%s_block",
+                "top": "%s:block/generated/%s/%s_block",
+                "side": "%s:block/generated/%s/%s_block"
+              }
+            }
+            """;
+    private static final String BLOCK_MODELS_STAIRS_INNER_TEMPLATE = """
+            {
+              "parent": "minecraft:block/inner_stairs",
+              "textures": {
+                "bottom": "%s:block/generated/%s/%s_block",
+                "top": "%s:block/generated/%s/%s_block",
+                "side": "%s:block/generated/%s/%s_block"
+              }
+            }
+            """;
+    private static final String BLOCK_MODELS_STAIRS_OUTER_TEMPLATE = """
+            {
+              "parent": "minecraft:block/outer_stairs",
+              "textures": {
+                "bottom": "%s:block/generated/%s/%s_block",
+                "top": "%s:block/generated/%s/%s_block",
+                "side": "%s:block/generated/%s/%s_block"
+              }
+            }
+            """;
+    private static final String BLOCK_MODELS_SLAB_TOP_CONTENT_TEMPLATE = """
+            {
+              "parent": "minecraft:block/slab_top",
+              "textures": {
+                "bottom": "%s:block/generated/%s/%s_block",
+                "top": "%s:block/generated/%s/%s_block",
+                "side": "%s:block/generated/%s/%s_block"
+              }
+            }
+            """;
+    private static final String BLOCK_MODELS_ITEM_CONTENT_TEMPLATE = """
             {
               "parent": "%s:block/generated/%s/%s_block"
             }
             """;
-
-    private static final String TRANSLATION_FILE_TEMPLATE = """
+    private static final String BLOCK_MODELS_SLAB_ITEM_CONTENT_TEMPLATE = """
+            {
+              "parent": "%s:block/generated/%s/%s_slab"
+            }
+            """;
+    private static final String BLOCK_MODELS_STAIRS_ITEM_CONTENT_TEMPLATE = """
+            {
+              "parent": "%s:block/generated/%s/%s_stairs"
+            }
+            """;
+    private static final String TRANSLATION_CONTENT_TEMPLATE = """
             {
               "DO.NOT.EDIT.MANUALLY.BEGIN": "BEGIN",
               GENERATED_TRANSLATION_CODE
               "DO.NOT.EDIT.MANUALLY.END": "END"
             }
             """;
-    public static final String ANIMATION_FILE_TEMPLATE = """
-            {
-              "animation": {}
-            }
-            """;
-
     private final Project project;
     private final String modName;
     private final String subName;
@@ -123,6 +422,10 @@ public abstract class CodeGenerator {
     }
 
     public void writeToFile(File file, String text) throws IOException {
+        if (!file.exists()) {
+            file.getParentFile().mkdirs();
+            file.createNewFile();
+        }
         try (FileWriter fileWriter = new FileWriter(file)) {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(text);
@@ -153,31 +456,17 @@ public abstract class CodeGenerator {
         if (!translationsFile.exists() && translationsFile.getParentFile().mkdirs() && translationsFile.createNewFile()) {
             writeToFile(
                     translationsFile,
-                    TRANSLATION_FILE_TEMPLATE.replace("GENERATED_TRANSLATION_CODE", buildTranslationText())
+                    TRANSLATION_CONTENT_TEMPLATE.replace("GENERATED_TRANSLATION_CODE", buildTranslationText())
             );
         } else {
             String translations = readFromFile(getTranslationsFile());
-            if (translations.contains("\"DO.NOT.EDIT.MANUALLY.BEGIN\": \"BEGIN\",") && translations.contains("\"DO.NOT.EDIT.MANUALLY.END\": \"END\"")) {
-                //translations file from our generation
-                translations = LANG_REPLACE
-                        .matcher(translations)
-                        .replaceAll("\"DO.NOT.EDIT.MANUALLY.BEGIN\": \"BEGIN\"," +
-                                buildTranslationText() +
-                                "  \"DO.NOT.EDIT.MANUALLY.END\": \"END\"");
-                writeToFile(this.translationsFile, translations);
-            } else {
-                //translations not from our generation, add our block
-                ObjectNode translationNode = (ObjectNode) objectMapper.readTree(this.translationsFile);
-                translationNode.put("DO.NOT.EDIT.MANUALLY.BEGIN", "BEGIN");
-                for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
-                    translationNode.put(
-                            String.format(ITEM_TRANSLATION_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()), block.getTranslation());
-                    translationNode.put(
-                            String.format(BLOCK_TRANSLATION_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()), block.getTranslation());
-                }
-                translationNode.put("DO.NOT.EDIT.MANUALLY.END", "END");
-                objectMapper.writeValue(this.translationsFile, translationNode);
-            }
+            //translations file from our generation
+            translations = LANG_REPLACE
+                    .matcher(translations)
+                    .replaceAll("\"DO.NOT.EDIT.MANUALLY.BEGIN\": \"BEGIN\"," +
+                            buildTranslationText() +
+                            "  \"DO.NOT.EDIT.MANUALLY.END\": \"END\"");
+            writeToFile(this.translationsFile, translations);
         }
     }
 
@@ -186,14 +475,38 @@ public abstract class CodeGenerator {
         for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
             //add item
             //key
-            translations.append("\n  \"").append(String.format(ITEM_TRANSLATION_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
+            translations.append("\n  \"").append(String.format(ITEM_TRANSLATION_KEY_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
             //value
             translations.append(" \"").append(block.getTranslation()).append("\",");
             //add block
             //key
-            translations.append("\n  \"").append(String.format(BLOCK_TRANSLATION_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
+            translations.append("\n  \"").append(String.format(BLOCK_TRANSLATION_KEY_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
             //value
             translations.append(" \"").append(block.getTranslation()).append("\",\n");
+            if (block.generateSlab()) {
+                //add item
+                //key
+                translations.append("\n  \"").append(String.format(ITEM_SLAB_TRANSLATION_KEY_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
+                //value
+                translations.append(" \"").append(block.getTranslation()).append(" Slab").append("\",");
+                //add block
+                //key
+                translations.append("\n  \"").append(String.format(BLOCK_SLAB_TRANSLATION_KEY_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
+                //value
+                translations.append(" \"").append(block.getTranslation()).append(" Slab").append("\",\n");
+            }
+            if (block.generateStair()) {
+                //add item
+                //key
+                translations.append("\n  \"").append(String.format(ITEM_STAIRS_TRANSLATION_KEY_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
+                //value
+                translations.append(" \"").append(block.getTranslation()).append(" Stairs").append("\",");
+                //add block
+                //key
+                translations.append("\n  \"").append(String.format(BLOCK_STAIRS_TRANSLATION_KEY_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId())).append("\":");
+                //value
+                translations.append(" \"").append(block.getTranslation()).append(" Stairs").append("\",\n");
+            }
         }
         return translations;
     }
@@ -210,11 +523,6 @@ public abstract class CodeGenerator {
         File itemModelsDir = new File(assetsDirectory, "models/item");
         File itemTexturesDir = new File(assetsDirectory, "textures/item");
         File blockTexturesDir = new File(assetsDirectory, "textures/block");
-        blockstatesDir.mkdirs();
-        blockModelsDir.mkdirs();
-        itemModelsDir.mkdirs();
-        itemTexturesDir.mkdirs();
-        blockTexturesDir.mkdirs();
         File blockstate;
         File blockModel;
         File itemBlockModel;
@@ -224,22 +532,22 @@ public abstract class CodeGenerator {
         BufferedImage texture;
         for (BlockDefinition block : blockDefinitionParser.getBlocks()) {
             //blockstate
-            blockstate = new File(blockstatesDir, String.format(BLOCKSTATES_TEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+            blockstate = new File(blockstatesDir, String.format(BLOCKSTATES_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
             blockstate.getParentFile().mkdirs();
-            writeToFile(blockstate, String.format(BLOCKSTATE_FILE_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
+            writeToFile(blockstate, String.format(BLOCKSTATE_CONTENT_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
 
             //block model
-            blockModel = new File(blockModelsDir, String.format(BLOCK_MODEL_TEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+            blockModel = new File(blockModelsDir, String.format(BLOCK_MODEL_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
             blockModel.getParentFile().mkdirs();
-            writeToFile(blockModel, String.format(BLOCK_MODELS_FILE_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
+            writeToFile(blockModel, String.format(BLOCK_MODELS_CONTENT_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
 
             //item block model
-            itemBlockModel = new File(itemModelsDir, String.format(ITEM_BLOCK_MODEL_TEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+            itemBlockModel = new File(itemModelsDir, String.format(ITEM_BLOCK_MODEL_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
             itemBlockModel.getParentFile().mkdirs();
-            writeToFile(itemBlockModel, String.format(BLOCK_MODELS_ITEM_FILE_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
+            writeToFile(itemBlockModel, String.format(BLOCK_MODELS_ITEM_CONTENT_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
 
             //block texture
-            blockTexture = new File(blockTexturesDir, String.format(BLOCK_TEXTURE_TEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+            blockTexture = new File(blockTexturesDir, String.format(BLOCK_TEXTURE_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
             blockTexture.getParentFile().mkdirs();
             textureSource = new File(blockDefinitionParser.getAssetsDirectory(), block.getId() + ".png");
             texture = ImageIO.read(textureSource);
@@ -251,9 +559,62 @@ public abstract class CodeGenerator {
                 textureMCMeta = new File(blockTexture.getParent(), blockTexture.getName() + ".mcmeta");
                 textureMCMeta.createNewFile();
                 writeToFile(textureMCMeta,
-                        ANIMATION_FILE_TEMPLATE);
+                        ANIMATION_CONTENT_TEMPLATE);
             }
             Files.copy(textureSource.toPath(), blockTexture.toPath(), StandardCopyOption.REPLACE_EXISTING);
+
+            if (block.generateSlab()) {
+                //blockstate slab
+                blockstate = new File(blockstatesDir, String.format(BLOCKSTATES_SLAB_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+                writeToFile(blockstate, String.format(BLOCKSTATE_SLAB_CONTENT_TEMPLATE,
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId()));
+                //block model slab
+                blockModel = new File(blockModelsDir, String.format(BLOCK_MODEL_SLAB_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+                writeToFile(blockModel, String.format(BLOCK_MODELS_SLAB_CONTENT_TEMPLATE,
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId()));
+                //block model slab top
+                blockModel = new File(blockModelsDir, String.format(BLOCK_MODEL_SLAB_TOP_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+                writeToFile(blockModel, String.format(BLOCK_MODELS_SLAB_TOP_CONTENT_TEMPLATE,
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId()));
+                //item block model slab
+                itemBlockModel = new File(itemModelsDir, String.format(ITEM_BLOCK_MODEL_SLAB_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+                writeToFile(itemBlockModel, String.format(BLOCK_MODELS_SLAB_ITEM_CONTENT_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
+            }
+            if (block.generateStair()) {
+                //blockstate stairs
+                blockstate = new File(blockstatesDir, String.format(BLOCKSTATES_STAIRS_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+                writeToFile(blockstate, BLOCKSTATE_STAIRS_CONTENT_TEMPLATE
+                        .replace("MODID", id)
+                        .replace("MATERIAL", block.getMaterial().toLowerCase())
+                        .replace("BLOCKID", block.getId()));
+                //block model stairs
+                blockModel = new File(blockModelsDir, String.format(BLOCK_MODEL_STAIRS_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+                writeToFile(blockModel, String.format(BLOCK_MODELS_STAIRS_TEMPLATE,
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId()));
+                //block model stairs inner
+                blockModel = new File(blockModelsDir, String.format(BLOCK_MODEL_STAIRS_INNER_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+                writeToFile(blockModel, String.format(BLOCK_MODELS_STAIRS_INNER_TEMPLATE,
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId()));
+                //block model stairs outer
+                blockModel = new File(blockModelsDir, String.format(BLOCK_MODEL_STAIRS_OUTER_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+                writeToFile(blockModel, String.format(BLOCK_MODELS_STAIRS_OUTER_TEMPLATE,
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId(),
+                        id, block.getMaterial().toLowerCase(), block.getId()));
+                //item block model slab
+                itemBlockModel = new File(itemModelsDir, String.format(ITEM_BLOCK_MODEL_STAIRS_FILETEMPLATE, block.getMaterial().toLowerCase(), block.getId()));
+                writeToFile(itemBlockModel, String.format(BLOCK_MODELS_STAIRS_ITEM_CONTENT_TEMPLATE, id, block.getMaterial().toLowerCase(), block.getId()));
+            }
         }
     }
 

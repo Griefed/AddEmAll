@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "addemall:block/generated/stone/red_stripes_slab"
+    },
+    "type=double": {
+      "model": "addemall:block/generated/stone/red_stripes_block"
+    },
+    "type=top": {
+      "model": "addemall:block/generated/stone/red_stripes_slab_top"
+    }
+  }
+}

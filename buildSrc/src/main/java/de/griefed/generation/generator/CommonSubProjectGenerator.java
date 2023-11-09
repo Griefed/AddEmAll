@@ -8,9 +8,17 @@ import org.gradle.api.Project;
 import java.io.IOException;
 
 public class CommonSubProjectGenerator extends CodeGenerator implements CodeGeneration {
-    public CommonSubProjectGenerator(Project project, String modName, BlockDefinitionParser parser, ObjectMapper objectMapper) {
-        super(project, modName, parser, objectMapper);
-    }
+    private static final String BLOCK_REGISTRATION_TEMPLATE        = "\tpublic static final RegistryObject<Block> %s = BLOCKS.register(\"generated/%s/%s_block\", () -> new Block(BlockBehaviour.Properties.of(Material.%s).sound(SoundType.%s).strength(%df, %df).lightLevel(state -> %d).explosionResistance(%df)TOOLBREAK));";
+    private static final String BLOCK_ITEM_REGISTRATION_TEMPLATE   = "\tpublic static final RegistryObject<Item>  %s_ITEM = ITEMS.register(\"generated/%s/%s\", () -> new BlockItem(%s.get(), itemBuilder()));";
+    private static final String SLAB_REGISTRATION_TEMPLATE       = "\n\tpublic static final RegistryObject<Block> %s_SLAB = BLOCKS.register(\"generated/%s/%s_slab\", () -> new SlabBlock(BlockBehaviour.Properties.copy(%s.get())));";
+    private static final String SLAB_ITEM_REGISTRATION_TEMPLATE  = "\n\tpublic static final RegistryObject<Item>  %s_SLAB_ITEM = ITEMS.register(\"generated/%s/%s_slab\", () -> new BlockItem(%s_SLAB.get(), itemBuilder()));";
+    private static final String STAIR_REGISTRATION_TEMPLATE      = "\n\tpublic static final RegistryObject<Block> %s_STAIRS = BLOCKS.register(\"generated/%s/%s_stairs\", () -> new ModStairs(%s.get().defaultBlockState(), BlockBehaviour.Properties.copy(%s.get())));";
+    private static final String STAIR_ITEM_REGISTRATION_TEMPlATE = "\n\tpublic static final RegistryObject<Item>  %s_STAIRS_ITEM = ITEMS.register(\"generated/%s/%s_stairs\", () -> new BlockItem(%s_STAIRS.get(), itemBuilder()));";
+
+    private static final String BLOCK_REGISTRATION = """
+            %s
+            %s%s%s%s%s
+            """;
 
     private final String commonGeneratedModBlocksClassTemplate = """
             package GROUP.block;
@@ -128,21 +136,9 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
             .replace("GROUP", getGroup())
             .replace("MODID", getId());
 
-    private static final String BLOCK_REGISTRATION_TEMPLATE = """
-            \tpublic static final RegistryObject<Block> %s = BLOCKS.register("generated/%s/%s_block",
-             \t\t\t() -> new Block(BlockBehaviour.Properties.of(Material.%s).sound(SoundType.%s)
-            				\t.strength(%df, %df).lightLevel(state -> %d).explosionResistance(%df)TOOLBREAK));
-                       """;
-
-    private static final String BLOCK_ITEM_REGISTRATION_TEMPLATE = """
-            \tpublic static final RegistryObject<Item> %s_ITEM = ITEMS.register("generated/%s/%s",
-                \t\t() -> new BlockItem(%s.get(), itemBuilder()));
-                        """;
-
-    private static final String BLOCK_REGISTRATION = """
-            %s
-            %s
-            """;
+    public CommonSubProjectGenerator(Project project, String modName, BlockDefinitionParser parser, ObjectMapper objectMapper) {
+        super(project, modName, parser, objectMapper);
+    }
 
     public void run() throws IOException {
         createModBlockPackage();
@@ -188,6 +184,10 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
         StringBuilder blocks = new StringBuilder();
         String blockToRegister;
         String blockItemToRegister;
+        String slabToRegister = "";
+        String slabItemToRegister = "";
+        String stairToRegister = "";
+        String stairItemToRegister = "";
         for (BlockDefinition block : getBlockDefinitionParser().getBlocks()) {
             //block
             blockToRegister = String.format(
@@ -196,7 +196,7 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
                     block.getMaterial(), block.getSoundType(), block.getStrengthOne(), block.getStrengthTwo(),
                     block.getLightLevel(), block.getExplosionResistance());
             if (block.isRequiresCorrectTool()) {
-                blockToRegister = blockToRegister.replace("TOOL", "\n\t\t\t\t\t.requiresCorrectToolForDrops()");
+                blockToRegister = blockToRegister.replace("TOOL", ".requiresCorrectToolForDrops()");
             } else {
                 blockToRegister = blockToRegister.replace("TOOL", "");
             }
@@ -212,16 +212,33 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
                     block.getId().toUpperCase(), block.getMaterial().toLowerCase(), block.getId(), block.getId().toUpperCase()
             );
 
-            //add block and block item
+            if (block.generateSlab()) {
+                slabToRegister = String.format(SLAB_REGISTRATION_TEMPLATE,
+                        block.getId().toUpperCase(), block.getMaterial().toLowerCase(), block.getId(), block.getId().toUpperCase());
+                slabItemToRegister = String.format(SLAB_ITEM_REGISTRATION_TEMPLATE,
+                        block.getId().toUpperCase(), block.getMaterial().toLowerCase(), block.getId(), block.getId().toUpperCase());
+            }
+
+            if (block.generateStair()) {
+                stairToRegister = String.format(STAIR_REGISTRATION_TEMPLATE,
+                        block.getId().toUpperCase(), block.getMaterial().toLowerCase(), block.getId(),
+                        block.getId().toUpperCase(), block.getId().toUpperCase());
+                stairItemToRegister = String.format(STAIR_ITEM_REGISTRATION_TEMPlATE,
+                        block.getId().toUpperCase(), block.getMaterial().toLowerCase(), block.getId(), block.getId().toUpperCase());
+            }
+
+            //add registrations
             blocks.append(String.format(
                     BLOCK_REGISTRATION,
-                    blockToRegister, blockItemToRegister
+                    blockToRegister, blockItemToRegister,
+                    slabToRegister, slabItemToRegister,
+                    stairToRegister, stairItemToRegister
             ));
         }
         modBlocks = GENERATED_CODE_PATTERN
                 .matcher(modBlocks)
                 .replaceAll(
-                        "/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/\n\n" +
+                        "/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/\n" +
                                 blocks +
                                 "\t/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/");
         writeToFile(getModBlocksClass(), modBlocks);

@@ -3,137 +3,407 @@
   "item.addemall.generated.dirt.green_zen_block": "Green Zen",
   "block.addemall.generated.dirt.green_zen_block": "Green Zen",
 
+  "item.addemall.generated.dirt.green_zen_slab": "Green Zen Slab",
+  "block.addemall.generated.dirt.green_zen_slab": "Green Zen Slab",
+
+  "item.addemall.generated.dirt.green_zen_stairs": "Green Zen Stairs",
+  "block.addemall.generated.dirt.green_zen_stairs": "Green Zen Stairs",
+
   "item.addemall.generated.dirt.yellow_zen_block": "Yellow Zen",
   "block.addemall.generated.dirt.yellow_zen_block": "Yellow Zen",
+
+  "item.addemall.generated.dirt.yellow_zen_slab": "Yellow Zen Slab",
+  "block.addemall.generated.dirt.yellow_zen_slab": "Yellow Zen Slab",
+
+  "item.addemall.generated.dirt.yellow_zen_stairs": "Yellow Zen Stairs",
+  "block.addemall.generated.dirt.yellow_zen_stairs": "Yellow Zen Stairs",
 
   "item.addemall.generated.dirt.blue_zen_block": "Blue Zen",
   "block.addemall.generated.dirt.blue_zen_block": "Blue Zen",
 
+  "item.addemall.generated.dirt.blue_zen_slab": "Blue Zen Slab",
+  "block.addemall.generated.dirt.blue_zen_slab": "Blue Zen Slab",
+
+  "item.addemall.generated.dirt.blue_zen_stairs": "Blue Zen Stairs",
+  "block.addemall.generated.dirt.blue_zen_stairs": "Blue Zen Stairs",
+
   "item.addemall.generated.dirt.brown_zen_block": "Brown Zen",
   "block.addemall.generated.dirt.brown_zen_block": "Brown Zen",
+
+  "item.addemall.generated.dirt.brown_zen_slab": "Brown Zen Slab",
+  "block.addemall.generated.dirt.brown_zen_slab": "Brown Zen Slab",
+
+  "item.addemall.generated.dirt.brown_zen_stairs": "Brown Zen Stairs",
+  "block.addemall.generated.dirt.brown_zen_stairs": "Brown Zen Stairs",
 
   "item.addemall.generated.dirt.red_zen_block": "Red Zen",
   "block.addemall.generated.dirt.red_zen_block": "Red Zen",
 
+  "item.addemall.generated.dirt.red_zen_slab": "Red Zen Slab",
+  "block.addemall.generated.dirt.red_zen_slab": "Red Zen Slab",
+
+  "item.addemall.generated.dirt.red_zen_stairs": "Red Zen Stairs",
+  "block.addemall.generated.dirt.red_zen_stairs": "Red Zen Stairs",
+
   "item.addemall.generated.metal.metal_floor_1_block": "Metal Floor 1",
   "block.addemall.generated.metal.metal_floor_1_block": "Metal Floor 1",
+
+  "item.addemall.generated.metal.metal_floor_1_slab": "Metal Floor 1 Slab",
+  "block.addemall.generated.metal.metal_floor_1_slab": "Metal Floor 1 Slab",
+
+  "item.addemall.generated.metal.metal_floor_1_stairs": "Metal Floor 1 Stairs",
+  "block.addemall.generated.metal.metal_floor_1_stairs": "Metal Floor 1 Stairs",
 
   "item.addemall.generated.metal.metal_floor_2_block": "Metal Floor 2",
   "block.addemall.generated.metal.metal_floor_2_block": "Metal Floor 2",
 
+  "item.addemall.generated.metal.metal_floor_2_slab": "Metal Floor 2 Slab",
+  "block.addemall.generated.metal.metal_floor_2_slab": "Metal Floor 2 Slab",
+
+  "item.addemall.generated.metal.metal_floor_2_stairs": "Metal Floor 2 Stairs",
+  "block.addemall.generated.metal.metal_floor_2_stairs": "Metal Floor 2 Stairs",
+
   "item.addemall.generated.metal.metal_floor_3_block": "Metal Floor 3",
   "block.addemall.generated.metal.metal_floor_3_block": "Metal Floor 3",
+
+  "item.addemall.generated.metal.metal_floor_3_slab": "Metal Floor 3 Slab",
+  "block.addemall.generated.metal.metal_floor_3_slab": "Metal Floor 3 Slab",
+
+  "item.addemall.generated.metal.metal_floor_3_stairs": "Metal Floor 3 Stairs",
+  "block.addemall.generated.metal.metal_floor_3_stairs": "Metal Floor 3 Stairs",
 
   "item.addemall.generated.metal.metal_floor_4_block": "Metal Floor 4",
   "block.addemall.generated.metal.metal_floor_4_block": "Metal Floor 4",
 
+  "item.addemall.generated.metal.metal_floor_4_slab": "Metal Floor 4 Slab",
+  "block.addemall.generated.metal.metal_floor_4_slab": "Metal Floor 4 Slab",
+
+  "item.addemall.generated.metal.metal_floor_4_stairs": "Metal Floor 4 Stairs",
+  "block.addemall.generated.metal.metal_floor_4_stairs": "Metal Floor 4 Stairs",
+
   "item.addemall.generated.metal.metal_floor_5_block": "Metal Floor 5",
   "block.addemall.generated.metal.metal_floor_5_block": "Metal Floor 5",
+
+  "item.addemall.generated.metal.metal_floor_5_slab": "Metal Floor 5 Slab",
+  "block.addemall.generated.metal.metal_floor_5_slab": "Metal Floor 5 Slab",
+
+  "item.addemall.generated.metal.metal_floor_5_stairs": "Metal Floor 5 Stairs",
+  "block.addemall.generated.metal.metal_floor_5_stairs": "Metal Floor 5 Stairs",
 
   "item.addemall.generated.metal.metal_floor_6_block": "Metal Floor 6",
   "block.addemall.generated.metal.metal_floor_6_block": "Metal Floor 6",
 
+  "item.addemall.generated.metal.metal_floor_6_slab": "Metal Floor 6 Slab",
+  "block.addemall.generated.metal.metal_floor_6_slab": "Metal Floor 6 Slab",
+
+  "item.addemall.generated.metal.metal_floor_6_stairs": "Metal Floor 6 Stairs",
+  "block.addemall.generated.metal.metal_floor_6_stairs": "Metal Floor 6 Stairs",
+
   "item.addemall.generated.metal.metal_plating_1_block": "Metal Plating 1",
   "block.addemall.generated.metal.metal_plating_1_block": "Metal Plating 1",
+
+  "item.addemall.generated.metal.metal_plating_1_slab": "Metal Plating 1 Slab",
+  "block.addemall.generated.metal.metal_plating_1_slab": "Metal Plating 1 Slab",
+
+  "item.addemall.generated.metal.metal_plating_1_stairs": "Metal Plating 1 Stairs",
+  "block.addemall.generated.metal.metal_plating_1_stairs": "Metal Plating 1 Stairs",
 
   "item.addemall.generated.metal.metal_plating_2_block": "Metal Plating 2",
   "block.addemall.generated.metal.metal_plating_2_block": "Metal Plating 2",
 
+  "item.addemall.generated.metal.metal_plating_2_slab": "Metal Plating 2 Slab",
+  "block.addemall.generated.metal.metal_plating_2_slab": "Metal Plating 2 Slab",
+
+  "item.addemall.generated.metal.metal_plating_2_stairs": "Metal Plating 2 Stairs",
+  "block.addemall.generated.metal.metal_plating_2_stairs": "Metal Plating 2 Stairs",
+
   "item.addemall.generated.metal.metal_plating_3_block": "Metal Plating 3",
   "block.addemall.generated.metal.metal_plating_3_block": "Metal Plating 3",
+
+  "item.addemall.generated.metal.metal_plating_3_slab": "Metal Plating 3 Slab",
+  "block.addemall.generated.metal.metal_plating_3_slab": "Metal Plating 3 Slab",
+
+  "item.addemall.generated.metal.metal_plating_3_stairs": "Metal Plating 3 Stairs",
+  "block.addemall.generated.metal.metal_plating_3_stairs": "Metal Plating 3 Stairs",
 
   "item.addemall.generated.metal.metal_plating_4_block": "Metal Plating 4",
   "block.addemall.generated.metal.metal_plating_4_block": "Metal Plating 4",
 
+  "item.addemall.generated.metal.metal_plating_4_slab": "Metal Plating 4 Slab",
+  "block.addemall.generated.metal.metal_plating_4_slab": "Metal Plating 4 Slab",
+
+  "item.addemall.generated.metal.metal_plating_4_stairs": "Metal Plating 4 Stairs",
+  "block.addemall.generated.metal.metal_plating_4_stairs": "Metal Plating 4 Stairs",
+
   "item.addemall.generated.metal.metal_roof_1_block": "Metal Roof 1",
   "block.addemall.generated.metal.metal_roof_1_block": "Metal Roof 1",
+
+  "item.addemall.generated.metal.metal_roof_1_slab": "Metal Roof 1 Slab",
+  "block.addemall.generated.metal.metal_roof_1_slab": "Metal Roof 1 Slab",
+
+  "item.addemall.generated.metal.metal_roof_1_stairs": "Metal Roof 1 Stairs",
+  "block.addemall.generated.metal.metal_roof_1_stairs": "Metal Roof 1 Stairs",
 
   "item.addemall.generated.metal.metal_roof_2_block": "Metal Roof 2",
   "block.addemall.generated.metal.metal_roof_2_block": "Metal Roof 2",
 
+  "item.addemall.generated.metal.metal_roof_2_slab": "Metal Roof 2 Slab",
+  "block.addemall.generated.metal.metal_roof_2_slab": "Metal Roof 2 Slab",
+
+  "item.addemall.generated.metal.metal_roof_2_stairs": "Metal Roof 2 Stairs",
+  "block.addemall.generated.metal.metal_roof_2_stairs": "Metal Roof 2 Stairs",
+
   "item.addemall.generated.metal.metal_roof_3_block": "Metal Roof 3",
   "block.addemall.generated.metal.metal_roof_3_block": "Metal Roof 3",
+
+  "item.addemall.generated.metal.metal_roof_3_slab": "Metal Roof 3 Slab",
+  "block.addemall.generated.metal.metal_roof_3_slab": "Metal Roof 3 Slab",
+
+  "item.addemall.generated.metal.metal_roof_3_stairs": "Metal Roof 3 Stairs",
+  "block.addemall.generated.metal.metal_roof_3_stairs": "Metal Roof 3 Stairs",
 
   "item.addemall.generated.metal.metal_roof_4_block": "Metal Roof 4",
   "block.addemall.generated.metal.metal_roof_4_block": "Metal Roof 4",
 
+  "item.addemall.generated.metal.metal_roof_4_slab": "Metal Roof 4 Slab",
+  "block.addemall.generated.metal.metal_roof_4_slab": "Metal Roof 4 Slab",
+
+  "item.addemall.generated.metal.metal_roof_4_stairs": "Metal Roof 4 Stairs",
+  "block.addemall.generated.metal.metal_roof_4_stairs": "Metal Roof 4 Stairs",
+
   "item.addemall.generated.metal.metal_roof_5_block": "Metal Roof 5",
   "block.addemall.generated.metal.metal_roof_5_block": "Metal Roof 5",
+
+  "item.addemall.generated.metal.metal_roof_5_slab": "Metal Roof 5 Slab",
+  "block.addemall.generated.metal.metal_roof_5_slab": "Metal Roof 5 Slab",
+
+  "item.addemall.generated.metal.metal_roof_5_stairs": "Metal Roof 5 Stairs",
+  "block.addemall.generated.metal.metal_roof_5_stairs": "Metal Roof 5 Stairs",
 
   "item.addemall.generated.metal.metal_vent_1_block": "Metal Vent 1",
   "block.addemall.generated.metal.metal_vent_1_block": "Metal Vent 1",
 
+  "item.addemall.generated.metal.metal_vent_1_slab": "Metal Vent 1 Slab",
+  "block.addemall.generated.metal.metal_vent_1_slab": "Metal Vent 1 Slab",
+
+  "item.addemall.generated.metal.metal_vent_1_stairs": "Metal Vent 1 Stairs",
+  "block.addemall.generated.metal.metal_vent_1_stairs": "Metal Vent 1 Stairs",
+
   "item.addemall.generated.metal.metal_wall_1_block": "Metal Wall 1",
   "block.addemall.generated.metal.metal_wall_1_block": "Metal Wall 1",
+
+  "item.addemall.generated.metal.metal_wall_1_slab": "Metal Wall 1 Slab",
+  "block.addemall.generated.metal.metal_wall_1_slab": "Metal Wall 1 Slab",
+
+  "item.addemall.generated.metal.metal_wall_1_stairs": "Metal Wall 1 Stairs",
+  "block.addemall.generated.metal.metal_wall_1_stairs": "Metal Wall 1 Stairs",
 
   "item.addemall.generated.metal.metal_wall_2_block": "Metal Wall 2",
   "block.addemall.generated.metal.metal_wall_2_block": "Metal Wall 2",
 
+  "item.addemall.generated.metal.metal_wall_2_slab": "Metal Wall 2 Slab",
+  "block.addemall.generated.metal.metal_wall_2_slab": "Metal Wall 2 Slab",
+
+  "item.addemall.generated.metal.metal_wall_2_stairs": "Metal Wall 2 Stairs",
+  "block.addemall.generated.metal.metal_wall_2_stairs": "Metal Wall 2 Stairs",
+
   "item.addemall.generated.metal.metal_wall_3_block": "Metal Wall 3",
   "block.addemall.generated.metal.metal_wall_3_block": "Metal Wall 3",
+
+  "item.addemall.generated.metal.metal_wall_3_slab": "Metal Wall 3 Slab",
+  "block.addemall.generated.metal.metal_wall_3_slab": "Metal Wall 3 Slab",
+
+  "item.addemall.generated.metal.metal_wall_3_stairs": "Metal Wall 3 Stairs",
+  "block.addemall.generated.metal.metal_wall_3_stairs": "Metal Wall 3 Stairs",
 
   "item.addemall.generated.metal.metal_wall_4_block": "Metal Wall 4",
   "block.addemall.generated.metal.metal_wall_4_block": "Metal Wall 4",
 
+  "item.addemall.generated.metal.metal_wall_4_slab": "Metal Wall 4 Slab",
+  "block.addemall.generated.metal.metal_wall_4_slab": "Metal Wall 4 Slab",
+
+  "item.addemall.generated.metal.metal_wall_4_stairs": "Metal Wall 4 Stairs",
+  "block.addemall.generated.metal.metal_wall_4_stairs": "Metal Wall 4 Stairs",
+
   "item.addemall.generated.metal.metal_wall_5_block": "Metal Wall 5",
   "block.addemall.generated.metal.metal_wall_5_block": "Metal Wall 5",
+
+  "item.addemall.generated.metal.metal_wall_5_slab": "Metal Wall 5 Slab",
+  "block.addemall.generated.metal.metal_wall_5_slab": "Metal Wall 5 Slab",
+
+  "item.addemall.generated.metal.metal_wall_5_stairs": "Metal Wall 5 Stairs",
+  "block.addemall.generated.metal.metal_wall_5_stairs": "Metal Wall 5 Stairs",
 
   "item.addemall.generated.metal.metal_wall_6_block": "Metal Wall 6",
   "block.addemall.generated.metal.metal_wall_6_block": "Metal Wall 6",
 
+  "item.addemall.generated.metal.metal_wall_6_slab": "Metal Wall 6 Slab",
+  "block.addemall.generated.metal.metal_wall_6_slab": "Metal Wall 6 Slab",
+
+  "item.addemall.generated.metal.metal_wall_6_stairs": "Metal Wall 6 Stairs",
+  "block.addemall.generated.metal.metal_wall_6_stairs": "Metal Wall 6 Stairs",
+
   "item.addemall.generated.metal.metal_wall_7_block": "Metal Wall 7",
   "block.addemall.generated.metal.metal_wall_7_block": "Metal Wall 7",
+
+  "item.addemall.generated.metal.metal_wall_7_slab": "Metal Wall 7 Slab",
+  "block.addemall.generated.metal.metal_wall_7_slab": "Metal Wall 7 Slab",
+
+  "item.addemall.generated.metal.metal_wall_7_stairs": "Metal Wall 7 Stairs",
+  "block.addemall.generated.metal.metal_wall_7_stairs": "Metal Wall 7 Stairs",
 
   "item.addemall.generated.metal.metal_wall_8_block": "Metal Wall 8",
   "block.addemall.generated.metal.metal_wall_8_block": "Metal Wall 8",
 
+  "item.addemall.generated.metal.metal_wall_8_slab": "Metal Wall 8 Slab",
+  "block.addemall.generated.metal.metal_wall_8_slab": "Metal Wall 8 Slab",
+
+  "item.addemall.generated.metal.metal_wall_8_stairs": "Metal Wall 8 Stairs",
+  "block.addemall.generated.metal.metal_wall_8_stairs": "Metal Wall 8 Stairs",
+
   "item.addemall.generated.metal.metal_wall_9_block": "Metal Wall 9",
   "block.addemall.generated.metal.metal_wall_9_block": "Metal Wall 9",
+
+  "item.addemall.generated.metal.metal_wall_9_slab": "Metal Wall 9 Slab",
+  "block.addemall.generated.metal.metal_wall_9_slab": "Metal Wall 9 Slab",
+
+  "item.addemall.generated.metal.metal_wall_9_stairs": "Metal Wall 9 Stairs",
+  "block.addemall.generated.metal.metal_wall_9_stairs": "Metal Wall 9 Stairs",
 
   "item.addemall.generated.metal.metal_wall_10_block": "Metal Wall 10",
   "block.addemall.generated.metal.metal_wall_10_block": "Metal Wall 10",
 
+  "item.addemall.generated.metal.metal_wall_10_slab": "Metal Wall 10 Slab",
+  "block.addemall.generated.metal.metal_wall_10_slab": "Metal Wall 10 Slab",
+
+  "item.addemall.generated.metal.metal_wall_10_stairs": "Metal Wall 10 Stairs",
+  "block.addemall.generated.metal.metal_wall_10_stairs": "Metal Wall 10 Stairs",
+
   "item.addemall.generated.metal.metal_wall_11_block": "Metal Wall 11",
   "block.addemall.generated.metal.metal_wall_11_block": "Metal Wall 11",
+
+  "item.addemall.generated.metal.metal_wall_11_slab": "Metal Wall 11 Slab",
+  "block.addemall.generated.metal.metal_wall_11_slab": "Metal Wall 11 Slab",
+
+  "item.addemall.generated.metal.metal_wall_11_stairs": "Metal Wall 11 Stairs",
+  "block.addemall.generated.metal.metal_wall_11_stairs": "Metal Wall 11 Stairs",
 
   "item.addemall.generated.metal.metal_wall_12_block": "Metal Wall 12",
   "block.addemall.generated.metal.metal_wall_12_block": "Metal Wall 12",
 
+  "item.addemall.generated.metal.metal_wall_12_slab": "Metal Wall 12 Slab",
+  "block.addemall.generated.metal.metal_wall_12_slab": "Metal Wall 12 Slab",
+
+  "item.addemall.generated.metal.metal_wall_12_stairs": "Metal Wall 12 Stairs",
+  "block.addemall.generated.metal.metal_wall_12_stairs": "Metal Wall 12 Stairs",
+
   "item.addemall.generated.metal.metal_wall_13_block": "Metal Wall 13",
   "block.addemall.generated.metal.metal_wall_13_block": "Metal Wall 13",
+
+  "item.addemall.generated.metal.metal_wall_13_slab": "Metal Wall 13 Slab",
+  "block.addemall.generated.metal.metal_wall_13_slab": "Metal Wall 13 Slab",
+
+  "item.addemall.generated.metal.metal_wall_13_stairs": "Metal Wall 13 Stairs",
+  "block.addemall.generated.metal.metal_wall_13_stairs": "Metal Wall 13 Stairs",
 
   "item.addemall.generated.metal.metal_wall_14_block": "Metal Wall 14",
   "block.addemall.generated.metal.metal_wall_14_block": "Metal Wall 14",
 
+  "item.addemall.generated.metal.metal_wall_14_slab": "Metal Wall 14 Slab",
+  "block.addemall.generated.metal.metal_wall_14_slab": "Metal Wall 14 Slab",
+
+  "item.addemall.generated.metal.metal_wall_14_stairs": "Metal Wall 14 Stairs",
+  "block.addemall.generated.metal.metal_wall_14_stairs": "Metal Wall 14 Stairs",
+
   "item.addemall.generated.metal.metal_wall_15_block": "Metal Wall 15",
   "block.addemall.generated.metal.metal_wall_15_block": "Metal Wall 15",
+
+  "item.addemall.generated.metal.metal_wall_15_slab": "Metal Wall 15 Slab",
+  "block.addemall.generated.metal.metal_wall_15_slab": "Metal Wall 15 Slab",
+
+  "item.addemall.generated.metal.metal_wall_15_stairs": "Metal Wall 15 Stairs",
+  "block.addemall.generated.metal.metal_wall_15_stairs": "Metal Wall 15 Stairs",
 
   "item.addemall.generated.stone.red_stripes_block": "Red Stripes",
   "block.addemall.generated.stone.red_stripes_block": "Red Stripes",
 
+  "item.addemall.generated.stone.red_stripes_slab": "Red Stripes Slab",
+  "block.addemall.generated.stone.red_stripes_slab": "Red Stripes Slab",
+
+  "item.addemall.generated.stone.red_stripes_stairs": "Red Stripes Stairs",
+  "block.addemall.generated.stone.red_stripes_stairs": "Red Stripes Stairs",
+
   "item.addemall.generated.wool.carpet_1_block": "Carpet 1",
   "block.addemall.generated.wool.carpet_1_block": "Carpet 1",
+
+  "item.addemall.generated.wool.carpet_1_slab": "Carpet 1 Slab",
+  "block.addemall.generated.wool.carpet_1_slab": "Carpet 1 Slab",
+
+  "item.addemall.generated.wool.carpet_1_stairs": "Carpet 1 Stairs",
+  "block.addemall.generated.wool.carpet_1_stairs": "Carpet 1 Stairs",
 
   "item.addemall.generated.wool.carpet_2_block": "Carpet 2",
   "block.addemall.generated.wool.carpet_2_block": "Carpet 2",
 
+  "item.addemall.generated.wool.carpet_2_slab": "Carpet 2 Slab",
+  "block.addemall.generated.wool.carpet_2_slab": "Carpet 2 Slab",
+
+  "item.addemall.generated.wool.carpet_2_stairs": "Carpet 2 Stairs",
+  "block.addemall.generated.wool.carpet_2_stairs": "Carpet 2 Stairs",
+
   "item.addemall.generated.stone.tiles_1_block": "Tiles 1",
   "block.addemall.generated.stone.tiles_1_block": "Tiles 1",
+
+  "item.addemall.generated.stone.tiles_1_slab": "Tiles 1 Slab",
+  "block.addemall.generated.stone.tiles_1_slab": "Tiles 1 Slab",
+
+  "item.addemall.generated.stone.tiles_1_stairs": "Tiles 1 Stairs",
+  "block.addemall.generated.stone.tiles_1_stairs": "Tiles 1 Stairs",
 
   "item.addemall.generated.stone.tiles_2_block": "Tiles 2",
   "block.addemall.generated.stone.tiles_2_block": "Tiles 2",
 
+  "item.addemall.generated.stone.tiles_2_slab": "Tiles 2 Slab",
+  "block.addemall.generated.stone.tiles_2_slab": "Tiles 2 Slab",
+
+  "item.addemall.generated.stone.tiles_2_stairs": "Tiles 2 Stairs",
+  "block.addemall.generated.stone.tiles_2_stairs": "Tiles 2 Stairs",
+
   "item.addemall.generated.stone.tiles_3_block": "Tiles 3",
   "block.addemall.generated.stone.tiles_3_block": "Tiles 3",
+
+  "item.addemall.generated.stone.tiles_3_slab": "Tiles 3 Slab",
+  "block.addemall.generated.stone.tiles_3_slab": "Tiles 3 Slab",
+
+  "item.addemall.generated.stone.tiles_3_stairs": "Tiles 3 Stairs",
+  "block.addemall.generated.stone.tiles_3_stairs": "Tiles 3 Stairs",
 
   "item.addemall.generated.stone.tiles_4_block": "Tiles 4",
   "block.addemall.generated.stone.tiles_4_block": "Tiles 4",
 
+  "item.addemall.generated.stone.tiles_4_slab": "Tiles 4 Slab",
+  "block.addemall.generated.stone.tiles_4_slab": "Tiles 4 Slab",
+
+  "item.addemall.generated.stone.tiles_4_stairs": "Tiles 4 Stairs",
+  "block.addemall.generated.stone.tiles_4_stairs": "Tiles 4 Stairs",
+
   "item.addemall.generated.stone.tiles_5_block": "Tiles 5",
   "block.addemall.generated.stone.tiles_5_block": "Tiles 5",
 
+  "item.addemall.generated.stone.tiles_5_slab": "Tiles 5 Slab",
+  "block.addemall.generated.stone.tiles_5_slab": "Tiles 5 Slab",
+
+  "item.addemall.generated.stone.tiles_5_stairs": "Tiles 5 Stairs",
+  "block.addemall.generated.stone.tiles_5_stairs": "Tiles 5 Stairs",
+
   "item.addemall.generated.wood.wallpaper_1_block": "Wallpaper 1",
   "block.addemall.generated.wood.wallpaper_1_block": "Wallpaper 1",
+
+  "item.addemall.generated.wood.wallpaper_1_slab": "Wallpaper 1 Slab",
+  "block.addemall.generated.wood.wallpaper_1_slab": "Wallpaper 1 Slab",
+
+  "item.addemall.generated.wood.wallpaper_1_stairs": "Wallpaper 1 Stairs",
+  "block.addemall.generated.wood.wallpaper_1_stairs": "Wallpaper 1 Stairs",
   "DO.NOT.EDIT.MANUALLY.END": "END",
   "itemGroup.addemall.tab": "AddEmAll"
 }

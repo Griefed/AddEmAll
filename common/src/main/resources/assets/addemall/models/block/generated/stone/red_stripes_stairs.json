@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "addemall:block/generated/stone/red_stripes_block",
+    "top": "addemall:block/generated/stone/red_stripes_block",
+    "side": "addemall:block/generated/stone/red_stripes_block"
+  }
+}

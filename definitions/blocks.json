@@ -9,7 +9,9 @@
     "lightLevel": 4,
     "explosionResistance": 0,
     "requiresCorrectTool": false,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "yellow_zen",
@@ -21,7 +23,9 @@
     "lightLevel": 4,
     "explosionResistance": 0,
     "requiresCorrectTool": false,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "blue_zen",
@@ -33,7 +37,9 @@
     "lightLevel": 4,
     "explosionResistance": 0,
     "requiresCorrectTool": false,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "brown_zen",
@@ -45,7 +51,9 @@
     "lightLevel": 4,
     "explosionResistance": 0,
     "requiresCorrectTool": false,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "red_zen",
@@ -57,7 +65,9 @@
     "lightLevel": 4,
     "explosionResistance": 0,
     "requiresCorrectTool": false,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_floor_1",
@@ -69,7 +79,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_floor_2",
@@ -81,7 +93,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_floor_3",
@@ -93,7 +107,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_floor_4",
@@ -105,7 +121,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_floor_5",
@@ -117,7 +135,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_floor_6",
@@ -129,7 +149,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_plating_1",
@@ -141,7 +163,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_plating_2",
@@ -153,7 +177,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_plating_3",
@@ -165,7 +191,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_plating_4",
@@ -177,7 +205,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_roof_1",
@@ -189,7 +219,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_roof_2",
@@ -201,7 +233,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_roof_3",
@@ -213,7 +247,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_roof_4",
@@ -225,7 +261,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_roof_5",
@@ -237,7 +275,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_vent_1",
@@ -249,7 +289,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_1",
@@ -261,7 +303,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_2",
@@ -273,7 +317,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_3",
@@ -285,7 +331,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_4",
@@ -297,7 +345,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_5",
@@ -309,7 +359,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_6",
@@ -321,7 +373,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_7",
@@ -333,7 +387,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_8",
@@ -345,7 +401,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_9",
@@ -357,7 +415,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_10",
@@ -369,7 +429,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_11",
@@ -381,7 +443,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_12",
@@ -393,7 +457,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_13",
@@ -405,7 +471,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_14",
@@ -417,7 +485,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "metal_wall_15",
@@ -429,7 +499,9 @@
     "lightLevel": 0,
     "explosionResistance": 12,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "red_stripes",
@@ -441,7 +513,9 @@
     "lightLevel": 0,
     "explosionResistance": 8,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "carpet_1",
@@ -453,7 +527,9 @@
     "lightLevel": 0,
     "explosionResistance": 0,
     "requiresCorrectTool": false,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "carpet_2",
@@ -465,7 +541,9 @@
     "lightLevel": 0,
     "explosionResistance": 0,
     "requiresCorrectTool": false,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "tiles_1",
@@ -477,7 +555,9 @@
     "lightLevel": 0,
     "explosionResistance": 8,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "tiles_2",
@@ -489,7 +569,9 @@
     "lightLevel": 0,
     "explosionResistance": 8,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "tiles_3",
@@ -501,7 +583,9 @@
     "lightLevel": 0,
     "explosionResistance": 8,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "tiles_4",
@@ -513,7 +597,9 @@
     "lightLevel": 0,
     "explosionResistance": 8,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "tiles_5",
@@ -525,7 +611,9 @@
     "lightLevel": 0,
     "explosionResistance": 8,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   },
   {
     "id": "wallpaper_1",
@@ -537,6 +625,8 @@
     "lightLevel": 0,
     "explosionResistance": 4,
     "requiresCorrectTool": true,
-    "instabreak": false
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
   }
 ]

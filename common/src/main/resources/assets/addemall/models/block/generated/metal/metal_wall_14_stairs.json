@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "addemall:block/generated/metal/metal_wall_14_block",
+    "top": "addemall:block/generated/metal/metal_wall_14_block",
+    "side": "addemall:block/generated/metal/metal_wall_14_block"
+  }
+}

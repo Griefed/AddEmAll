@@ -18,7 +18,7 @@ public class TextureScaler {
         }
         scaledImage = sourceImage.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
         output = new BufferedImage(scaledImage.getWidth(null), scaledImage.getHeight(null), BufferedImage.TYPE_INT_ARGB);
-        output.getGraphics().drawImage(scaledImage,0, 0, null);
+        output.getGraphics().drawImage(scaledImage, 0, 0, null);
         return output;
     }
 }

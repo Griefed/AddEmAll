@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "addemall:block/generated/dirt/green_zen_block",
+    "top": "addemall:block/generated/dirt/green_zen_block",
+    "side": "addemall:block/generated/dirt/green_zen_block"
+  }
+}

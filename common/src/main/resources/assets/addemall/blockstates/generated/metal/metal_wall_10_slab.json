@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "addemall:block/generated/metal/metal_wall_10_slab"
+    },
+    "type=double": {
+      "model": "addemall:block/generated/metal/metal_wall_10_block"
+    },
+    "type=top": {
+      "model": "addemall:block/generated/metal/metal_wall_10_slab_top"
+    }
+  }
+}

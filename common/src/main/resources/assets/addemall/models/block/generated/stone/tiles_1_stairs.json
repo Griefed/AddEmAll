@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "addemall:block/generated/stone/tiles_1_block",
+    "top": "addemall:block/generated/stone/tiles_1_block",
+    "side": "addemall:block/generated/stone/tiles_1_block"
+  }
+}

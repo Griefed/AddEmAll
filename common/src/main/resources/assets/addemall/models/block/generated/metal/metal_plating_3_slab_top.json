@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "addemall:block/generated/metal/metal_plating_3_block",
+    "top": "addemall:block/generated/metal/metal_plating_3_block",
+    "side": "addemall:block/generated/metal/metal_plating_3_block"
+  }
+}
