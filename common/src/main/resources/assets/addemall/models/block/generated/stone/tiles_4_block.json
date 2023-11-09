@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "addemall:block/generated/stone/tiles_4_block"
+  }
+}

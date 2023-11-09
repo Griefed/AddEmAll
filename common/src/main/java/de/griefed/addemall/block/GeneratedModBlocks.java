@@ -308,6 +308,68 @@ public class GeneratedModBlocks {
 	public static final RegistryObject<Item> RED_STRIPES_ITEM = ITEMS.register("generated/stone/red_stripes",
     		() -> new BlockItem(RED_STRIPES.get(), itemBuilder()));
 
+	public static final RegistryObject<Block> CARPET_1 = BLOCKS.register("generated/wool/carpet_1_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL)
+					.strength(4f, 4f).lightLevel(state -> 0).explosionResistance(0f)));
+
+	public static final RegistryObject<Item> CARPET_1_ITEM = ITEMS.register("generated/wool/carpet_1",
+    		() -> new BlockItem(CARPET_1.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> CARPET_2 = BLOCKS.register("generated/wool/carpet_2_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL)
+					.strength(4f, 4f).lightLevel(state -> 0).explosionResistance(0f)));
+
+	public static final RegistryObject<Item> CARPET_2_ITEM = ITEMS.register("generated/wool/carpet_2",
+    		() -> new BlockItem(CARPET_2.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> TILES_1 = BLOCKS.register("generated/stone/tiles_1_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+					.strength(8f, 8f).lightLevel(state -> 0).explosionResistance(8f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> TILES_1_ITEM = ITEMS.register("generated/stone/tiles_1",
+    		() -> new BlockItem(TILES_1.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> TILES_2 = BLOCKS.register("generated/stone/tiles_2_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+					.strength(8f, 8f).lightLevel(state -> 0).explosionResistance(8f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> TILES_2_ITEM = ITEMS.register("generated/stone/tiles_2",
+    		() -> new BlockItem(TILES_2.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> TILES_3 = BLOCKS.register("generated/stone/tiles_3_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+					.strength(8f, 8f).lightLevel(state -> 0).explosionResistance(8f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> TILES_3_ITEM = ITEMS.register("generated/stone/tiles_3",
+    		() -> new BlockItem(TILES_3.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> TILES_4 = BLOCKS.register("generated/stone/tiles_4_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+					.strength(8f, 8f).lightLevel(state -> 0).explosionResistance(8f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> TILES_4_ITEM = ITEMS.register("generated/stone/tiles_4",
+    		() -> new BlockItem(TILES_4.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> TILES_5 = BLOCKS.register("generated/stone/tiles_5_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
+					.strength(8f, 8f).lightLevel(state -> 0).explosionResistance(8f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> TILES_5_ITEM = ITEMS.register("generated/stone/tiles_5",
+    		() -> new BlockItem(TILES_5.get(), itemBuilder()));
+
+	public static final RegistryObject<Block> WALLPAPER_1 = BLOCKS.register("generated/wood/wallpaper_1_block",
+ 			() -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)
+					.strength(6f, 6f).lightLevel(state -> 0).explosionResistance(4f)
+					.requiresCorrectToolForDrops()));
+
+	public static final RegistryObject<Item> WALLPAPER_1_ITEM = ITEMS.register("generated/wood/wallpaper_1",
+    		() -> new BlockItem(WALLPAPER_1.get(), itemBuilder()));
+
 	/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
     
     private static Item.Properties itemBuilder() {

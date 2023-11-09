@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "addemall:block/generated/wood/wallpaper_1_block"
+  }
+}

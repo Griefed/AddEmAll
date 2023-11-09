@@ -110,6 +110,30 @@
 
   "item.addemall.generated.stone.red_stripes_block": "Red Stripes",
   "block.addemall.generated.stone.red_stripes_block": "Red Stripes",
+
+  "item.addemall.generated.wool.carpet_1_block": "Carpet 1",
+  "block.addemall.generated.wool.carpet_1_block": "Carpet 1",
+
+  "item.addemall.generated.wool.carpet_2_block": "Carpet 2",
+  "block.addemall.generated.wool.carpet_2_block": "Carpet 2",
+
+  "item.addemall.generated.stone.tiles_1_block": "Tiles 1",
+  "block.addemall.generated.stone.tiles_1_block": "Tiles 1",
+
+  "item.addemall.generated.stone.tiles_2_block": "Tiles 2",
+  "block.addemall.generated.stone.tiles_2_block": "Tiles 2",
+
+  "item.addemall.generated.stone.tiles_3_block": "Tiles 3",
+  "block.addemall.generated.stone.tiles_3_block": "Tiles 3",
+
+  "item.addemall.generated.stone.tiles_4_block": "Tiles 4",
+  "block.addemall.generated.stone.tiles_4_block": "Tiles 4",
+
+  "item.addemall.generated.stone.tiles_5_block": "Tiles 5",
+  "block.addemall.generated.stone.tiles_5_block": "Tiles 5",
+
+  "item.addemall.generated.wood.wallpaper_1_block": "Wallpaper 1",
+  "block.addemall.generated.wood.wallpaper_1_block": "Wallpaper 1",
   "DO.NOT.EDIT.MANUALLY.END": "END",
   "itemGroup.addemall.tab": "AddEmAll"
 }

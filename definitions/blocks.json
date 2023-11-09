@@ -442,5 +442,101 @@
     "explosionResistance": 8,
     "requiresCorrectTool": true,
     "instabreak": false
+  },
+  {
+    "id": "carpet_1",
+    "translation": "Carpet 1",
+    "material": "WOOL",
+    "soundType": "WOOL",
+    "strengthOne": 4,
+    "strengthTwo": 4,
+    "lightLevel": 0,
+    "explosionResistance": 0,
+    "requiresCorrectTool": false,
+    "instabreak": false
+  },
+  {
+    "id": "carpet_2",
+    "translation": "Carpet 2",
+    "material": "WOOL",
+    "soundType": "WOOL",
+    "strengthOne": 4,
+    "strengthTwo": 4,
+    "lightLevel": 0,
+    "explosionResistance": 0,
+    "requiresCorrectTool": false,
+    "instabreak": false
+  },
+  {
+    "id": "tiles_1",
+    "translation": "Tiles 1",
+    "material": "STONE",
+    "soundType": "STONE",
+    "strengthOne": 8,
+    "strengthTwo": 8,
+    "lightLevel": 0,
+    "explosionResistance": 8,
+    "requiresCorrectTool": true,
+    "instabreak": false
+  },
+  {
+    "id": "tiles_2",
+    "translation": "Tiles 2",
+    "material": "STONE",
+    "soundType": "STONE",
+    "strengthOne": 8,
+    "strengthTwo": 8,
+    "lightLevel": 0,
+    "explosionResistance": 8,
+    "requiresCorrectTool": true,
+    "instabreak": false
+  },
+  {
+    "id": "tiles_3",
+    "translation": "Tiles 3",
+    "material": "STONE",
+    "soundType": "STONE",
+    "strengthOne": 8,
+    "strengthTwo": 8,
+    "lightLevel": 0,
+    "explosionResistance": 8,
+    "requiresCorrectTool": true,
+    "instabreak": false
+  },
+  {
+    "id": "tiles_4",
+    "translation": "Tiles 4",
+    "material": "STONE",
+    "soundType": "STONE",
+    "strengthOne": 8,
+    "strengthTwo": 8,
+    "lightLevel": 0,
+    "explosionResistance": 8,
+    "requiresCorrectTool": true,
+    "instabreak": false
+  },
+  {
+    "id": "tiles_5",
+    "translation": "Tiles 5",
+    "material": "STONE",
+    "soundType": "STONE",
+    "strengthOne": 8,
+    "strengthTwo": 8,
+    "lightLevel": 0,
+    "explosionResistance": 8,
+    "requiresCorrectTool": true,
+    "instabreak": false
+  },
+  {
+    "id": "wallpaper_1",
+    "translation": "Wallpaper 1",
+    "material": "WOOD",
+    "soundType": "WOOD",
+    "strengthOne": 6,
+    "strengthTwo": 6,
+    "lightLevel": 0,
+    "explosionResistance": 4,
+    "requiresCorrectTool": true,
+    "instabreak": false
   }
 ]
