@@ -33,6 +33,9 @@ In the future I would like to add:
 
 Help with either of these would be greatly appreciated! I would love to keep these features in the [Common](Common/src/main/java/de/griefed/addemall)-package as much as possible.
 
+Currently, no other Minecraft, Forge or Fabric version support is planned. I mainly want to use the blocks in this mod in a modpack I enjoy.
+If you want support for other versions, feel free to fork this project, implement your changes, and submit a pull request!
+
 ## IntelliJ IDEA
 
 1. Clone or download this repository to your computer.
