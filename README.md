@@ -14,6 +14,8 @@ Mainly blocks inspired by the aesthetic of Half Life 2's Citadel, as well as oth
 
 Nothing big. Nothing fancy. Nothing complicated.
 
+All blocks / items in this mod are currently only available via creative mode.
+
 ![showcase](misc/showcase.png)
 
 ## Other Information:
