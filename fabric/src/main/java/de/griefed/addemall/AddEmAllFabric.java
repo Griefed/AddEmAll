@@ -23,7 +23,7 @@ public class AddEmAllFabric implements ModInitializer {
 	@Override
 	public void onInitialize() {
 	    Constants.LOG.info("Hello world!");
-	    LOGGER.info("Hello Fabric World!");
+	    LOGGER.info("Hello Fabric World! I'm gonna AddEmAll!");
         CommonClass.init();
 
 		ItemTooltipCallback.EVENT.register(CommonClass::onItemTooltip);

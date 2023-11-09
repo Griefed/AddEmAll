@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -22,7 +23,7 @@ public class AddEmAllForge {
 
     public static final CreativeModeTab TAB_ADDEMALL = new CreativeModeTab(Constants.MOD_ID + ".tab") {
       @Override
-      public ItemStack makeIcon() {
+      public @NotNull ItemStack makeIcon() {
           return new ItemStack(Items.DIAMOND);
       }
     };
@@ -31,7 +32,7 @@ public class AddEmAllForge {
     public AddEmAllForge() {
         // Use Forge to bootstrap the Common mod.
         Constants.LOG.info("Hello world!");
-        LOGGER.info("Hello Forge World!");
+        LOGGER.info("Hello Forge World! I'm gonna AddEmAll!");
         CommonClass.init();
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
