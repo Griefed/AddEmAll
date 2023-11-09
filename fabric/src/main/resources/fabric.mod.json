@@ -8,7 +8,7 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://www.griefed.de",
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/addemall",
         "sources": "https://github.com/Griefed/AddEmAll",
         "issues": "https://github.com/Griefed/AddEmAll/issues"
     },
@@ -29,9 +29,6 @@
         "fabric": "*",
         "minecraft": "1.19.2",
         "java": ">=17"
-    },
-    "suggests": {
-        "another-mod": "*"
     }
 }
   
