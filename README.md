@@ -1,11 +1,11 @@
 ## AddEmAll
 
 <!-- Mod page badges. Change the project ids and hyperlinks for correct data. -->
-<!--
-[![](http://cf.way2muchnoise.eu/full_415747_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/crumbs)
-[![](https://modrinth-utils.vercel.app/api/badge/downloads/?id=crumbs&logo=true)](https://modrinth.com/mod/crumbs)
-[![](http://cf.way2muchnoise.eu/versions/415747.svg)](https://www.curseforge.com/minecraft/mc-mods/crumbs)
--->
+
+[![](http://cf.way2muchnoise.eu/full_935081_downloads.svg)](https://legacy.curseforge.com/minecraft/mc-mods/addemall)
+[![](https://modrinth-utils.vercel.app/api/badge/downloads/?id=usDxEvVr&logo=true)](https://modrinth.com/mod/addemall)
+[![](http://cf.way2muchnoise.eu/versions/935081.svg)](https://legacy.curseforge.com/minecraft/mc-mods/addemall)
+
 
 ## What does this mod do?
 
@@ -16,7 +16,7 @@ Nothing big. Nothing fancy. Nothing complicated.
 
 All blocks / items in this mod are currently only available via creative mode.
 
-![showcase](misc/showcase.png)
+![showcase](https://i.griefed.de/upload/2023/11/09/20231109115332-42ea9451.png)
 
 ## Other Information:
 
