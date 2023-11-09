@@ -25,6 +25,14 @@ All blocks / items in this mod are currently only available via creative mode.
 
 # Development
 
+## Future
+
+In the future I would like to add:
+- custom fluids to resemble the radioactive water in Half-Life (2), with the sound and toxicity.
+- Either recipes to acquire the blocks in survival, or an item which consumes the material defined in the block to place said block in the world
+
+Help with either of these would be greatly appreciated! I would love to keep these features in the [Common](Common/src/main/java/de/griefed/addemall)-package as much as possible.
+
 ## IntelliJ IDEA
 
 1. Clone or download this repository to your computer.
