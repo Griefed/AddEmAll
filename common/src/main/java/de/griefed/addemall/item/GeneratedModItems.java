@@ -7,6 +7,7 @@ import de.griefed.addemall.registry.RegistryObject;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.Item;
 
+@SuppressWarnings("unused")
 public class GeneratedModItems {
     public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registry.ITEM_REGISTRY, Constants.MOD_ID);
 
@@ -19,7 +20,6 @@ public class GeneratedModItems {
     }
 
     // Called in the mod initializer / constructor in order to make sure that items are registered
-    public static void loadClass() {
-    }
+    public static void loadClass() {}
 }
 

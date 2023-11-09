@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 
+@SuppressWarnings("unused")
 public class GeneratedModBlocks {
     public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registry.BLOCK_REGISTRY, Constants.MOD_ID);
     public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registry.ITEM_REGISTRY, Constants.MOD_ID);
@@ -371,12 +372,11 @@ public class GeneratedModBlocks {
     		() -> new BlockItem(WALLPAPER_1.get(), itemBuilder()));
 
 	/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
-    
+
     private static Item.Properties itemBuilder() {
         return new Item.Properties().tab(Services.PLATFORM.getCreativeTab());
     }
 
     // Called in the mod initializer / constructor in order to make sure that items are registered
-    public static void loadClass() {
-    }
+    public static void loadClass() {}
 }

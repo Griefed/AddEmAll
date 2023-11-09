@@ -5,14 +5,10 @@ import de.griefed.addemall.item.GeneratedModItems;
 import de.griefed.addemall.platform.Services;
 import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.block.Block;
 
 import java.util.List;
 
@@ -35,7 +31,7 @@ public class CommonClass {
         // we have an interface in the common code and use a loader specific implementation to delegate our call to
         // the platform specific approach.
         if (Services.PLATFORM.isModLoaded("addemall")) {
-            Constants.LOG.info("Hello to AddEmAll");
+            Constants.LOG.info("Hello to addemall");
         }
 
         /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
