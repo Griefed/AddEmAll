@@ -404,6 +404,96 @@
 
   "item.addemall.generated.wood.wallpaper_1_stairs": "Wallpaper 1 Stairs",
   "block.addemall.generated.wood.wallpaper_1_stairs": "Wallpaper 1 Stairs",
+
+  "item.addemall.generated.stone.concrete_1_block": "Concrete 1",
+  "block.addemall.generated.stone.concrete_1_block": "Concrete 1",
+
+  "item.addemall.generated.stone.concrete_1_slab": "Concrete 1 Slab",
+  "block.addemall.generated.stone.concrete_1_slab": "Concrete 1 Slab",
+
+  "item.addemall.generated.stone.concrete_1_stairs": "Concrete 1 Stairs",
+  "block.addemall.generated.stone.concrete_1_stairs": "Concrete 1 Stairs",
+
+  "item.addemall.generated.stone.concrete_2_block": "Concrete 2",
+  "block.addemall.generated.stone.concrete_2_block": "Concrete 2",
+
+  "item.addemall.generated.stone.concrete_2_slab": "Concrete 2 Slab",
+  "block.addemall.generated.stone.concrete_2_slab": "Concrete 2 Slab",
+
+  "item.addemall.generated.stone.concrete_2_stairs": "Concrete 2 Stairs",
+  "block.addemall.generated.stone.concrete_2_stairs": "Concrete 2 Stairs",
+
+  "item.addemall.generated.stone.concrete_3_block": "Concrete 3",
+  "block.addemall.generated.stone.concrete_3_block": "Concrete 3",
+
+  "item.addemall.generated.stone.concrete_3_slab": "Concrete 3 Slab",
+  "block.addemall.generated.stone.concrete_3_slab": "Concrete 3 Slab",
+
+  "item.addemall.generated.stone.concrete_3_stairs": "Concrete 3 Stairs",
+  "block.addemall.generated.stone.concrete_3_stairs": "Concrete 3 Stairs",
+
+  "item.addemall.generated.stone.concrete_4_block": "Concrete 4",
+  "block.addemall.generated.stone.concrete_4_block": "Concrete 4",
+
+  "item.addemall.generated.stone.concrete_4_slab": "Concrete 4 Slab",
+  "block.addemall.generated.stone.concrete_4_slab": "Concrete 4 Slab",
+
+  "item.addemall.generated.stone.concrete_4_stairs": "Concrete 4 Stairs",
+  "block.addemall.generated.stone.concrete_4_stairs": "Concrete 4 Stairs",
+
+  "item.addemall.generated.stone.concrete_5_block": "Concrete 5",
+  "block.addemall.generated.stone.concrete_5_block": "Concrete 5",
+
+  "item.addemall.generated.stone.concrete_5_slab": "Concrete 5 Slab",
+  "block.addemall.generated.stone.concrete_5_slab": "Concrete 5 Slab",
+
+  "item.addemall.generated.stone.concrete_5_stairs": "Concrete 5 Stairs",
+  "block.addemall.generated.stone.concrete_5_stairs": "Concrete 5 Stairs",
+
+  "item.addemall.generated.stone.concrete_6_block": "Concrete 6",
+  "block.addemall.generated.stone.concrete_6_block": "Concrete 6",
+
+  "item.addemall.generated.stone.concrete_6_slab": "Concrete 6 Slab",
+  "block.addemall.generated.stone.concrete_6_slab": "Concrete 6 Slab",
+
+  "item.addemall.generated.stone.concrete_6_stairs": "Concrete 6 Stairs",
+  "block.addemall.generated.stone.concrete_6_stairs": "Concrete 6 Stairs",
+
+  "item.addemall.generated.stone.concrete_7_block": "Concrete 7",
+  "block.addemall.generated.stone.concrete_7_block": "Concrete 7",
+
+  "item.addemall.generated.stone.concrete_7_slab": "Concrete 7 Slab",
+  "block.addemall.generated.stone.concrete_7_slab": "Concrete 7 Slab",
+
+  "item.addemall.generated.stone.concrete_7_stairs": "Concrete 7 Stairs",
+  "block.addemall.generated.stone.concrete_7_stairs": "Concrete 7 Stairs",
+
+  "item.addemall.generated.stone.stone_tiles_1_block": "Stone Tiles 1",
+  "block.addemall.generated.stone.stone_tiles_1_block": "Stone Tiles 1",
+
+  "item.addemall.generated.stone.stone_tiles_1_slab": "Stone Tiles 1 Slab",
+  "block.addemall.generated.stone.stone_tiles_1_slab": "Stone Tiles 1 Slab",
+
+  "item.addemall.generated.stone.stone_tiles_1_stairs": "Stone Tiles 1 Stairs",
+  "block.addemall.generated.stone.stone_tiles_1_stairs": "Stone Tiles 1 Stairs",
+
+  "item.addemall.generated.stone.stone_tiles_2_block": "Stone Tiles 2",
+  "block.addemall.generated.stone.stone_tiles_2_block": "Stone Tiles 2",
+
+  "item.addemall.generated.stone.stone_tiles_2_slab": "Stone Tiles 2 Slab",
+  "block.addemall.generated.stone.stone_tiles_2_slab": "Stone Tiles 2 Slab",
+
+  "item.addemall.generated.stone.stone_tiles_2_stairs": "Stone Tiles 2 Stairs",
+  "block.addemall.generated.stone.stone_tiles_2_stairs": "Stone Tiles 2 Stairs",
+
+  "item.addemall.generated.stone.stone_tiles_3_block": "Stone Tiles 3",
+  "block.addemall.generated.stone.stone_tiles_3_block": "Stone Tiles 3",
+
+  "item.addemall.generated.stone.stone_tiles_3_slab": "Stone Tiles 3 Slab",
+  "block.addemall.generated.stone.stone_tiles_3_slab": "Stone Tiles 3 Slab",
+
+  "item.addemall.generated.stone.stone_tiles_3_stairs": "Stone Tiles 3 Stairs",
+  "block.addemall.generated.stone.stone_tiles_3_stairs": "Stone Tiles 3 Stairs",
   "DO.NOT.EDIT.MANUALLY.END": "END",
   "itemGroup.addemall.tab": "AddEmAll"
 }

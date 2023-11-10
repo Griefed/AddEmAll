@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "addemall:block/generated/stone/concrete_2_slab"
+    },
+    "type=double": {
+      "model": "addemall:block/generated/stone/concrete_2_block"
+    },
+    "type=top": {
+      "model": "addemall:block/generated/stone/concrete_2_slab_top"
+    }
+  }
+}
