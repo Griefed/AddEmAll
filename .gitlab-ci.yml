@@ -25,7 +25,7 @@ workflow:
 
 Build Test:
   stage: Tests
-  image: docker.griefed.dev/griefed/baseimage-ubuntu-jdk17-kotlin:1.0.4
+  image: docker.griefed.dev/eclipse-temurin:17-jdk-jammy
   before_script:
     - echo "**** Running in $CI_JOB_ID ****"
     - echo "**** Java location ****"
@@ -36,7 +36,7 @@ Build Test:
     - chmod +x gradlew
   script:
     - echo "**** Building ****"
-    - "./gradlew blockAndItemCodeGen build --info --full-stacktrace"
+    - "./gradlew clean blockAndItemCodeGen build --info --full-stacktrace"
   retry: 1
   rules:
     - if: '$CI_SERVER_HOST == "git.griefed.de"'
@@ -65,7 +65,7 @@ Generate Release:
 
 Build Release:
   stage: Build Release
-  image: docker.griefed.dev/griefed/baseimage-ubuntu-jdk17-kotlin:1.0.4
+  image: docker.griefed.dev/eclipse-temurin:17-jdk-jammy
   needs:
     - job: Build Test
       artifacts: false
@@ -83,7 +83,7 @@ Build Release:
     - chmod +x gradlew
   script:
     - echo "**** Building ****"
-    - "./gradlew -Pversion=${CI_COMMIT_TAG} blockAndItemCodeGen build --info --full-stacktrace"
+    - "./gradlew -Pversion=${CI_COMMIT_TAG} clean blockAndItemCodeGen build --info --full-stacktrace"
     - echo "**** Listing build directory ****"
     - LC_COLLATE=C ls -ahl --group-directories-first --color=auto */build
     - LC_COLLATE=C ls -ahl --group-directories-first --color=auto */build/*
