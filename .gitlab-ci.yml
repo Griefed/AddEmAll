@@ -36,7 +36,7 @@ Build Test:
     - chmod +x gradlew
   script:
     - echo "**** Building ****"
-    - "./gradlew build --info --full-stacktrace"
+    - "./gradlew blockAndItemCodeGen build --info --full-stacktrace"
   retry: 1
   rules:
     - if: '$CI_SERVER_HOST == "git.griefed.de"'
@@ -99,7 +99,7 @@ Build Release:
     - chmod +x gradlew
   script:
     - echo "**** Building ****"
-    - "./gradlew build -Pversion=${CI_COMMIT_TAG} --info --full-stacktrace"
+    - "./gradlew -Pversion=${CI_COMMIT_TAG} blockAndItemCodeGen build --info --full-stacktrace"
     - echo "**** Listing build directory ****"
     - LC_COLLATE=C ls -ahl --group-directories-first --color=auto */build
     - LC_COLLATE=C ls -ahl --group-directories-first --color=auto */build/*
