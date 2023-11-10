@@ -32,8 +32,12 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
 
+      - name: Update block and item implementations
+        run: ./gradlew clean blockAndItemCodeGen
+
       - name: Build Fabric
         run: ./gradlew :Fabric:build
+
       - name: Capture Fabric build artifacts
         uses: actions/upload-artifact@v3
         with:

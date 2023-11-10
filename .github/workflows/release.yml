@@ -58,7 +58,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build
-        run: ./gradlew -Pversion="${{ needs.preparations.outputs.version }}" clean build
+        run: ./gradlew -Pversion="${{ needs.preparations.outputs.version }}" clean blockAndItemCodeGen build
 
       - name: Publish (CurseForge/Modrinth/GitHub)
         uses: Kir-Antipov/mc-publish@v3.2
