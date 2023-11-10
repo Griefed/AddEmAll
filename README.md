@@ -16,7 +16,7 @@ Nothing big. Nothing fancy. Nothing complicated.
 
 All blocks / items in this mod are currently only available via creative mode.
 
-![showcase](https://i.griefed.de/upload/2023/11/09/20231109115332-42ea9451.png)
+![showcase](https://i.griefed.de/upload/2023/11/10/20231110225915-d8509788.png)
 
 ## Other Information:
 
