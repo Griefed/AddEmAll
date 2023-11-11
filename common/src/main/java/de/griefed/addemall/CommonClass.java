@@ -3,11 +3,9 @@ package de.griefed.addemall;
 import de.griefed.addemall.block.GeneratedModBlocks;
 import de.griefed.addemall.item.GeneratedModItems;
 import de.griefed.addemall.platform.Services;
-import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 
 import java.util.List;
@@ -35,9 +33,9 @@ public class CommonClass {
         }
 
         /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
-		GeneratedModBlocks.loadClass();
-		GeneratedModItems.loadClass();
-		/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
+        GeneratedModBlocks.loadClass();
+        GeneratedModItems.loadClass();
+        /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
     }
 
     public static void onItemTooltip(ItemStack stack, TooltipFlag context, List<Component> tooltip) {

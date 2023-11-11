@@ -1,13 +1,13 @@
 package de.griefed.addemall;
 
 import com.mojang.logging.LogUtils;
+import de.griefed.addemall.block.GeneratedModBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -22,10 +22,10 @@ public class AddEmAllForge {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final CreativeModeTab TAB_ADDEMALL = new CreativeModeTab(Constants.MOD_ID + ".tab") {
-      @Override
-      public @NotNull ItemStack makeIcon() {
-          return new ItemStack(Items.DIAMOND);
-      }
+        @Override
+        public @NotNull ItemStack makeIcon() {
+            return new ItemStack(GeneratedModBlocks.METAL_PLATING_2_ITEM.get());
+        }
     };
 
     // Very Important Comment
