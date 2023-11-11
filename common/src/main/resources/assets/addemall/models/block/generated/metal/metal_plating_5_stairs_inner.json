@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "addemall:block/generated/metal/metal_plating_5_block",
+    "top": "addemall:block/generated/metal/metal_plating_5_block",
+    "side": "addemall:block/generated/metal/metal_plating_5_block"
+  }
+}

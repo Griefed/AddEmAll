@@ -33,9 +33,9 @@ public class CommonClass {
         }
 
         /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
-        GeneratedModBlocks.loadClass();
-        GeneratedModItems.loadClass();
-        /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
+		GeneratedModBlocks.loadClass();
+		GeneratedModItems.loadClass();
+		/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
     }
 
     public static void onItemTooltip(ItemStack stack, TooltipFlag context, List<Component> tooltip) {

@@ -210,6 +210,20 @@
     "generateStair": true
   },
   {
+    "id": "metal_plating_5",
+    "translation": "Metal Plating 5",
+    "material": "METAL",
+    "soundType": "METAL",
+    "strengthOne": 12,
+    "strengthTwo": 12,
+    "lightLevel": 0,
+    "explosionResistance": 12,
+    "requiresCorrectTool": true,
+    "instabreak": false,
+    "generateSlab": true,
+    "generateStair": true
+  },
+  {
     "id": "metal_roof_1",
     "translation": "Metal Roof 1",
     "material": "METAL",
