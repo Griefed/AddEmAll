@@ -36,7 +36,9 @@ Build Test:
     - chmod +x gradlew
   script:
     - echo "**** Building ****"
-    - "./gradlew clean build --info --full-stacktrace"
+    - "./gradlew clean blockAndItemCodeGen --info --full-stacktrace"
+    - "./gradlew :Fabric:build --info --full-stacktrace"
+    - "./gradlew :Forge:build  --info --full-stacktrace"
   retry: 1
   rules:
     - if: '$CI_SERVER_HOST == "git.griefed.de"'

@@ -35,23 +35,24 @@ jobs:
       - name: Update block and item implementations
         run: ./gradlew clean blockAndItemCodeGen
 
-      - name: Build
-        run: ./gradlew build
-
-      - name: Capture Common build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: Artifacts
-          path: Common/build/libs/
-
+      - name: Build Fabric
+        run: ./gradlew :Fabric:build
       - name: Capture Fabric build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: Artifacts
           path: Fabric/build/libs/
 
+      - name: Build Forge
+        run: ./gradlew :Forge:build
       - name: Capture Forge build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: Artifacts
           path: Forge/build/libs/
+
+      - name: Capture Common build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Artifacts
+          path: Common/build/libs/
