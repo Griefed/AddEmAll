@@ -2,9 +2,10 @@
 
 <!-- Mod page badges. Change the project ids and hyperlinks for correct data. -->
 
-[![](http://cf.way2muchnoise.eu/full_935081_downloads.svg)](https://legacy.curseforge.com/minecraft/mc-mods/addemall)
-[![](https://modrinth-utils.vercel.app/api/badge/downloads/?id=usDxEvVr&logo=true)](https://modrinth.com/mod/addemall)
-[![](http://cf.way2muchnoise.eu/versions/935081.svg)](https://legacy.curseforge.com/minecraft/mc-mods/addemall)
+[![](https://img.shields.io/curseforge/dt/935081?logo=curseforge&label=Downloads&color=f16436)](https://legacy.curseforge.com/minecraft/mc-mods/addemall)
+[![](https://img.shields.io/modrinth/dt/usDxEvVr?logo=modrinth&label=Downloads&labelColor=2d2d2d&color=00af5c
+)](https://modrinth.com/mod/addemall)
+[![](https://cf.way2muchnoise.eu/versions/935081.svg)](https://legacy.curseforge.com/minecraft/mc-mods/addemall)
 
 
 ## What does this mod do?
