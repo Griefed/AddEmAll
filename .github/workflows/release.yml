@@ -90,8 +90,11 @@ jobs:
       - name: Make Gradle Wrapper Executable
         run: chmod +x ./gradlew
 
+      - name: Clean
+        run: ./gradlew clean blockAndItemCodeGen --info --full-stacktrace
+
       - name: Build
-        run: ./gradlew -Pversion="${{ needs.preparations.outputs.version }}" clean blockAndItemCodeGen build
+        run: ./gradlew -Pversion="${{ needs.preparations.outputs.version }}" :${{ matrix.name }}:build --info --full-stacktrace
 
       - name: Publish (CurseForge/Modrinth/GitHub)
         uses: Kir-Antipov/mc-publish@v3.3
