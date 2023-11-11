@@ -504,5 +504,6 @@
   "item.addemall.generated.stone.stone_tiles_3_stairs": "Stone Tiles 3 Stairs",
   "block.addemall.generated.stone.stone_tiles_3_stairs": "Stone Tiles 3 Stairs",
   "DO.NOT.EDIT.MANUALLY.END": "END",
-  "itemGroup.addemall.tab": "AddEmAll"
+  "itemGroup.addemall.tab": "AddEmAll",
+  "item.addemall.block_tool": "Block Tool"
 }

@@ -2,6 +2,7 @@ package de.griefed.addemall;
 
 import de.griefed.addemall.block.GeneratedModBlocks;
 import de.griefed.addemall.item.GeneratedModItems;
+import de.griefed.addemall.item.ModItems;
 import de.griefed.addemall.platform.Services;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
@@ -36,6 +37,8 @@ public class CommonClass {
 		GeneratedModBlocks.loadClass();
 		GeneratedModItems.loadClass();
 		/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
+
+        ModItems.loadClass();
     }
 
     public static void onItemTooltip(ItemStack stack, TooltipFlag context, List<Component> tooltip) {
