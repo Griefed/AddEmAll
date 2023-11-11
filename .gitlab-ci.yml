@@ -85,7 +85,9 @@ Build Release:
     - chmod +x gradlew
   script:
     - echo "**** Building ****"
-    - "./gradlew -Pversion=${CI_COMMIT_TAG} clean build --info --full-stacktrace"
+    - "./gradlew clean blockAndItemCodeGen --info --full-stacktrace"
+    - "./gradlew -Pversion=${CI_COMMIT_TAG} :Fabric:build --info --full-stacktrace"
+    - "./gradlew -Pversion=${CI_COMMIT_TAG} :Forge:build  --info --full-stacktrace"
     - echo "**** Listing build directory ****"
     - LC_COLLATE=C ls -ahl --group-directories-first --color=auto */build
     - LC_COLLATE=C ls -ahl --group-directories-first --color=auto */build/*
