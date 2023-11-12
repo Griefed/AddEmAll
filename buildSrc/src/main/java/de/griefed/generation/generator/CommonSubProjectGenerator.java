@@ -23,16 +23,18 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
     private final String commonGeneratedModBlocksClassTemplate = """
             package GROUP.block;
                         
-            import GROUP.Constants;
             import GROUP.platform.Services;
-            import GROUP.registry.RegistrationProvider;
             import GROUP.registry.RegistryObject;
-            import net.minecraft.core.Registry;
-            import net.minecraft.world.item.*;
+            import net.minecraft.world.item.BlockItem;
+            import net.minecraft.world.item.Item;
             import net.minecraft.world.level.block.Block;
+            import net.minecraft.world.level.block.SlabBlock;
             import net.minecraft.world.level.block.SoundType;
             import net.minecraft.world.level.block.state.BlockBehaviour;
             import net.minecraft.world.level.material.Material;
+            
+            import static GROUP.CommonClass.BLOCKS;
+            import static GROUP.CommonClass.ITEMS;
                         
             @SuppressWarnings("unused")
             public class GeneratedModBlocks {
@@ -55,12 +57,10 @@ public class CommonSubProjectGenerator extends CodeGenerator implements CodeGene
     private final String commonGeneratedItemsClassTemplate = """
             package GROUP.item;
                         
-            import GROUP.Constants;
             import GROUP.platform.Services;
-            import GROUP.registry.RegistrationProvider;
-            import GROUP.registry.RegistryObject;
-            import net.minecraft.core.Registry;
             import net.minecraft.world.item.Item;
+            
+            import static GROUP.CommonClass.ITEMS;
 
             @SuppressWarnings("unused")
             public class GeneratedModItems {

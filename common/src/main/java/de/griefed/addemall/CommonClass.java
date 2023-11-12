@@ -1,13 +1,18 @@
 package de.griefed.addemall;
 
 import de.griefed.addemall.block.GeneratedModBlocks;
+import de.griefed.addemall.event.KeyInputHandler;
 import de.griefed.addemall.item.GeneratedModItems;
 import de.griefed.addemall.item.ModItems;
 import de.griefed.addemall.platform.Services;
+import de.griefed.addemall.registry.RegistrationProvider;
+import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.block.Block;
 
 import java.util.List;
 
@@ -16,6 +21,9 @@ import java.util.List;
 // common compatible binaries. This means common code can not directly use loader specific concepts such as Forge events
 // however it will be compatible with all supported mod loaders.
 public class CommonClass {
+
+    public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registry.BLOCK_REGISTRY, Constants.MOD_ID);
+    public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registry.ITEM_REGISTRY, Constants.MOD_ID);
 
     // The loader specific projects are able to import and use any code from the common project. This allows you to
     // write the majority of your code here and load it from your loader specific projects. This example has some
@@ -39,6 +47,7 @@ public class CommonClass {
 		/*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
 
         ModItems.loadClass();
+        KeyInputHandler.loadClass();
     }
 
     public static void onItemTooltip(ItemStack stack, TooltipFlag context, List<Component> tooltip) {

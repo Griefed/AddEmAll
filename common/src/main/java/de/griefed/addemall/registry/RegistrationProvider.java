@@ -1,8 +1,10 @@
 package de.griefed.addemall.registry;
 
+import de.griefed.addemall.CommonClass;
 import de.griefed.addemall.platform.Services;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.block.Block;
 
 import java.util.Collection;
 import java.util.function.Supplier;

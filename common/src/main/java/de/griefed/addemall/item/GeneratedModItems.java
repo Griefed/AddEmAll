@@ -1,15 +1,12 @@
 package de.griefed.addemall.item;
 
-import de.griefed.addemall.Constants;
 import de.griefed.addemall.platform.Services;
-import de.griefed.addemall.registry.RegistrationProvider;
-import de.griefed.addemall.registry.RegistryObject;
-import net.minecraft.core.Registry;
 import net.minecraft.world.item.Item;
+
+import static de.griefed.addemall.CommonClass.ITEMS;
 
 @SuppressWarnings("unused")
 public class GeneratedModItems {
-    public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registry.ITEM_REGISTRY, Constants.MOD_ID);
 
     /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
 

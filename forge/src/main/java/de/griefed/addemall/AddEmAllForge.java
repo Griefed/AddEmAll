@@ -2,6 +2,7 @@ package de.griefed.addemall;
 
 import com.mojang.logging.LogUtils;
 import de.griefed.addemall.block.GeneratedModBlocks;
+import de.griefed.addemall.event.ForgeKeyInputHandler;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +35,7 @@ public class AddEmAllForge {
         Constants.LOG.info("Hello world!");
         LOGGER.info("Hello Forge World! I'm gonna AddEmAll!");
         CommonClass.init();
+        ForgeKeyInputHandler.register();
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 

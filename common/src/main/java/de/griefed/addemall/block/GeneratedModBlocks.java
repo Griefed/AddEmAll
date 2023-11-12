@@ -1,22 +1,20 @@
 package de.griefed.addemall.block;
 
-import de.griefed.addemall.Constants;
 import de.griefed.addemall.platform.Services;
-import de.griefed.addemall.registry.RegistrationProvider;
 import de.griefed.addemall.registry.RegistryObject;
-import net.minecraft.core.Registry;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 
+import static de.griefed.addemall.CommonClass.BLOCKS;
+import static de.griefed.addemall.CommonClass.ITEMS;
+
 @SuppressWarnings("unused")
 public class GeneratedModBlocks {
-    public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registry.BLOCK_REGISTRY, Constants.MOD_ID);
-    public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registry.ITEM_REGISTRY, Constants.MOD_ID);
 
     /*###GENERATED CODE - DO NOT EDIT - MANUALLY EDITED CODE WILL BE LOST###*/
 	public static final RegistryObject<Block> GREEN_ZEN = BLOCKS.register("generated/dirt/green_zen_block", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS).strength(2f, 2f).lightLevel(state -> 4).explosionResistance(0f)));
@@ -362,5 +360,6 @@ public class GeneratedModBlocks {
     }
 
     // Called in the mod initializer / constructor in order to make sure that items are registered
-    public static void loadClass() {}
+    public static void loadClass() {
+    }
 }
