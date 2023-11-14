@@ -19,10 +19,10 @@ public class ForgeKeyInputHandler {
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key event) {
             if (KeyInputHandler.toolBehaviourKey.consumeClick()) {
-                KeyInputHandler.TOOL_BEHAVIOUR = !KeyInputHandler.TOOL_BEHAVIOUR;
+                KeyInputHandler.BLOCKTOOL_MULTI_ACTIVE = !KeyInputHandler.BLOCKTOOL_MULTI_ACTIVE;
             }
             if (KeyInputHandler.toolShovelHoeKey.consumeClick()) {
-                KeyInputHandler.TOOL_SHOVEL_HOE = !KeyInputHandler.TOOL_SHOVEL_HOE;
+                KeyInputHandler.BLOCKTOOL_SHOVELMODE = !KeyInputHandler.BLOCKTOOL_SHOVELMODE;
             }
         }
     }

@@ -1,11 +1,13 @@
 package de.griefed.addemall;
 
 import de.griefed.addemall.block.GeneratedModBlocks;
+import de.griefed.addemall.client.BlockToolHud;
+import de.griefed.addemall.client.BlockToolHudOverlay;
 import de.griefed.addemall.event.FabricKeyInputHandler;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -30,5 +32,6 @@ public class AddEmAllFabric implements ModInitializer {
         FabricKeyInputHandler.register();
 
         ItemTooltipCallback.EVENT.register(CommonClass::onItemTooltip);
+        HudRenderCallback.EVENT.register(new BlockToolHudOverlay());
     }
 }

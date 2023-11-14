@@ -62,7 +62,7 @@ public class BlockToolItem extends DiggerItem {
         BlockState blockState = level.getBlockState(blockPos);
         Block block = blockState.getBlock();
         ItemStack itemInHand = context.getItemInHand();
-        if (player != null && player.isSecondaryUseActive() && KeyInputHandler.TOOL_BEHAVIOUR) {
+        if (player != null && player.isSecondaryUseActive() && KeyInputHandler.BLOCKTOOL_MULTI_ACTIVE) {
             // Axe
             Optional<BlockState> strippedState = getStripped(blockState);
             Optional<BlockState> previousState = WeatheringCopper.getPrevious(blockState);
@@ -98,7 +98,7 @@ public class BlockToolItem extends DiggerItem {
                 level.setBlockAndUpdate(blockPos, headBlock.getMaxAgeState(blockState));
 
                 return InteractionResult.sidedSuccess(level.isClientSide);
-            } else if (KeyInputHandler.TOOL_SHOVEL_HOE) {
+            } else if (KeyInputHandler.BLOCKTOOL_SHOVELMODE) {
                 // shovel
                 if (context.getClickedFace() == Direction.DOWN) {
                     return InteractionResult.PASS;

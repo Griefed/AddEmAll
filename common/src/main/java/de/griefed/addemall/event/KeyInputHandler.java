@@ -1,8 +1,6 @@
 package de.griefed.addemall.event;
 
-import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
-import org.lwjgl.glfw.GLFW;
 
 public class KeyInputHandler {
 
@@ -13,8 +11,8 @@ public class KeyInputHandler {
     public static KeyMapping toolBehaviourKey;
     public static KeyMapping toolShovelHoeKey;
 
-    public static boolean TOOL_BEHAVIOUR = false;
-    public static boolean TOOL_SHOVEL_HOE = false;
+    public static boolean BLOCKTOOL_MULTI_ACTIVE = false;
+    public static boolean BLOCKTOOL_SHOVELMODE = false;
 
     public static void loadClass() {}
 }

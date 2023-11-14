@@ -13,10 +13,10 @@ public class FabricKeyInputHandler {
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (toolBehaviourKey.consumeClick()) {
-                KeyInputHandler.TOOL_BEHAVIOUR = !KeyInputHandler.TOOL_BEHAVIOUR;
+                KeyInputHandler.BLOCKTOOL_MULTI_ACTIVE = !KeyInputHandler.BLOCKTOOL_MULTI_ACTIVE;
             }
             if (toolShovelHoeKey.consumeClick()) {
-                KeyInputHandler.TOOL_SHOVEL_HOE = !KeyInputHandler.TOOL_SHOVEL_HOE;
+                KeyInputHandler.BLOCKTOOL_SHOVELMODE = !KeyInputHandler.BLOCKTOOL_SHOVELMODE;
             }
         });
     }

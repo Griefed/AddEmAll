@@ -48,6 +48,7 @@ public class CommonClass {
 
         ModItems.loadClass();
         KeyInputHandler.loadClass();
+
     }
 
     public static void onItemTooltip(ItemStack stack, TooltipFlag context, List<Component> tooltip) {
