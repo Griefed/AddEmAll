@@ -17,6 +17,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -35,22 +36,20 @@ import static net.minecraft.world.item.HoeItem.changeIntoState;
 import static net.minecraft.world.item.HoeItem.changeIntoStateAndDropItem;
 
 public class BlockToolItem extends DiggerItem {
-
+//TODO tooltip
     public BlockToolItem() {
         super(12f, 12f, Tiers.NETHERITE, BlockTags.MINEABLE_WITH_PICKAXE, new Item.Properties().stacksTo(1).defaultDurability(0).durability(0).fireResistant().tab(Services.PLATFORM.getCreativeTab()));
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        //TODO axe, shovel, hoe usages
-        //TODO if air, open block selector
-        if (hand != InteractionHand.MAIN_HAND) {
+        /*if (hand != InteractionHand.MAIN_HAND) {
             return super.use(level, player, hand);
         }
         if (level.isClientSide()) {
             return super.use(level, player, hand);
-        }
-        CommonClass.BLOCKS.getEntries().forEach(block -> player.sendSystemMessage(block.get().getName()));
+        }*/
+        //TODO if air, open block selector
         return super.use(level, player, hand);
     }
 
@@ -62,7 +61,7 @@ public class BlockToolItem extends DiggerItem {
         BlockState blockState = level.getBlockState(blockPos);
         Block block = blockState.getBlock();
         ItemStack itemInHand = context.getItemInHand();
-        if (player != null && player.isSecondaryUseActive() && KeyInputHandler.BLOCKTOOL_MULTI_ACTIVE) {
+        if (player != null && KeyInputHandler.BLOCKTOOL_MULTI_ACTIVE) {
             // Axe
             Optional<BlockState> strippedState = getStripped(blockState);
             Optional<BlockState> previousState = WeatheringCopper.getPrevious(blockState);
