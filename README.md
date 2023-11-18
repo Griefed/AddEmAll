@@ -170,3 +170,7 @@ When adding new blocks, see the list below for available material- and soundtype
 |                             | WET_GRASS            |
 |                             | WOOD                 |
 |                             | WOOL                 |
+
+## The Block Tool
+
+See the 1.19.2-blocktool branch for infos regarding the Block Tool that never was.
