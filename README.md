@@ -1,3 +1,27 @@
+## Block Tool Branch
+
+This branch was meant to add the Block Tool (WIP name).
+However, creating an item with an inventory and a custom inventory screen in the Common-module in Minecraft, without adding
+external dependencies, is just complete and utter bullshit.
+
+The model and item, along with some basic keybinding, multi-tool capabilities (axe, shears, shovel, hoe), as well as placing
+blocks in the world via right-click, have been implemented in a very basic and does-this-even-work-way.
+
+If you feel up to the task of turning it into a fully fledged item with the above functionality, then be my guest!
+Fork it, make your changes, create a pull request.
+
+The goal was to have one item, prefferably end-game, which would be
+- a multi-tool with the functionality of axe, shovel, shear, hoe
+- indestructible to fire or durability loss
+- when mining blocks
+  - the material of said block should be stored
+  - right-clicking air should open a selector for blocks
+  - if material A was mined, then all blocks of material A should be selectable and placable
+- right-clicking any block should place the currently selected block
+- placing a block of material A should deplete the material store for A, in the Block Tool, by 1
+- the Block Tool was supposed to give access to AddEmAll blocks as well as any other blocks available in Minecraft
+- preferrably, the material store would be open for other mods to register their materials, allowing the Block Tool to become a one-stop-show manager for all blocks in the game
+
 ## AddEmAll
 
 [![](https://img.shields.io/curseforge/dt/935081?logo=curseforge&label=Downloads&color=f16436&labelColor=2d2d2d)](https://legacy.curseforge.com/minecraft/mc-mods/addemall)
